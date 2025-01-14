@@ -30,8 +30,7 @@
     "experiments": {
       "typedRoutes": true
     },
-    "plugins": [
-      "react-native-video"
-    ]
+    "plugins": ["react-native-video"],
+    "assetBundlePatterns": ["assets/videos/", "assets/images/"]
   }
 }
