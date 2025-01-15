@@ -387,7 +387,7 @@ const LabScreen: React.FC = () => {
           onPress={() => router.push("/lab")}
         >
           <Image
-            source={require("@/assets/images/lab-playlist.jpg")}
+            source={require("@/assets/images/gambarLab.jpg")}
             style={styles.playlistImage}
           />
           <Text style={styles.playlistTitle}>Playlist Lab</Text>
