@@ -357,7 +357,7 @@ const LabDetail: React.FC = () => {
       {/* Video Section */}
       <View style={styles.videoSection}>
         <Video
-          source={{ uri: "https://example.com/video1.mp4" }}
+          source={{ uri: "@/assets/videos/vid1.mp4" }}
           style={styles.video}
           controls
           resizeMode="contain"
@@ -390,7 +390,7 @@ const LabDetail: React.FC = () => {
           onPress={() =>
             router.push({
               pathname: "/quiz/[quizId]",
-              params: { quizId: labId },
+              params: { quizId: labId ?? "" },
             })
           }
         >
