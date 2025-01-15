@@ -20,7 +20,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#3b0a0a"
-      }
+      },
+      "permissions": [],
+      "package": "com.anonymous.GarudaVirtue"
     },
     "web": {
       "bundler": "metro",
@@ -30,7 +32,12 @@
     "experiments": {
       "typedRoutes": true
     },
-    "plugins": ["react-native-video", "expo-video"],
-    "assetBundlePatterns": ["**/*"]
+    "plugins": [
+      "react-native-video",
+      "expo-video"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
   }
 }
