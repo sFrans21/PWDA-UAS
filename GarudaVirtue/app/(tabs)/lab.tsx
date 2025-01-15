@@ -365,7 +365,7 @@ const LabScreen: React.FC = () => {
         <Text style={styles.heading}>Virtual Labs</Text>
         <View style={styles.virtualLabContainer}>
           <Image
-            source={require("@/assets/images/gambar-lab-main.jpg")}
+            source={require("@/assets/images/gambarLab.jpg")}
             style={styles.virtualLabImage}
           />
           <View style={styles.virtualLabDetails}>
