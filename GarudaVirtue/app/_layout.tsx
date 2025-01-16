@@ -66,6 +66,31 @@ export default function RootLayout() {
           name="modul/modul6"
           options={{ title: "Modul 6", headerShown: true }}
         />
+
+        <Stack.Screen
+          name="videos/vid1"
+          options={{ title: "Video 1", headerShown: true }}
+        />
+        <Stack.Screen
+          name="videos/vid2"
+          options={{ title: "Video 2", headerShown: true }}
+        />
+        <Stack.Screen
+          name="videos/vid3"
+          options={{ title: "Video 3", headerShown: true }}
+        />
+        <Stack.Screen
+          name="videos/vid4"
+          options={{ title: "Video 4", headerShown: true }}
+        />
+        <Stack.Screen
+          name="videos/vid5"
+          options={{ title: "Video 5", headerShown: true }}
+        />
+        <Stack.Screen
+          name="videos/vid6"
+          options={{ title: "Video 6", headerShown: true }}
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

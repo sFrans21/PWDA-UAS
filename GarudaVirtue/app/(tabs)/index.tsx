@@ -67,12 +67,89 @@
 //   },
 // });
 
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+// import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+// import { auth } from "../../FirebaseConfig";
+// import { router } from "expo-router";
+// import { getAuth } from "firebase/auth";
+
+// export default function TabOneScreen() {
+//   const handleSignOut = async () => {
+//     try {
+//       await auth.signOut();
+//       router.replace("/");
+//     } catch (error) {
+//       if (error instanceof Error) {
+//         console.error("Error signing out:", error.message);
+//         alert("Sign-out failed: " + (error as Error).message);
+//       } else {
+//         console.error("Error signing out:", error);
+//         alert("Sign-out failed");
+//       }
+//       alert("Sign-out failed: " + (error as Error).message);
+//     }
+//   };
+
+//   getAuth().onAuthStateChanged((user) => {
+//     if (!user) router.replace("/");
+//   });
+
+//   return (
+//     <View style={styles.container}>
+//       <Text style={styles.title}>You're Logged In</Text>
+//       <TouchableOpacity style={styles.button} onPress={handleSignOut}>
+//         <Text style={styles.buttonText}>Sign Out</Text>
+//       </TouchableOpacity>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: "center",
+//     alignItems: "center",
+//     backgroundColor: "#560216", // Warna utama dari logo
+//     padding: 20,
+//   },
+//   title: {
+//     fontSize: 28,
+//     fontWeight: "800",
+//     color: "#f9eedf", // Warna logo
+//     marginBottom: 40,
+//     textAlign: "center",
+//   },
+//   button: {
+//     backgroundColor: "#f9eedf", // Warna logo
+//     paddingVertical: 15,
+//     paddingHorizontal: 30,
+//     borderRadius: 10,
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 4 },
+//     shadowOpacity: 0.2,
+//     shadowRadius: 5,
+//     elevation: 5,
+//   },
+//   buttonText: {
+//     color: "#560216", // Warna latar belakang dari logo
+//     fontWeight: "600",
+//     fontSize: 16,
+//   },
+// });
+
+import React from "react";
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View,
+  Image,
+  ScrollView,
+} from "react-native";
 import { auth } from "../../FirebaseConfig";
 import { router } from "expo-router";
 import { getAuth } from "firebase/auth";
 
-export default function TabOneScreen() {
+export default function MergedScreen() {
   const handleSignOut = async () => {
     try {
       await auth.signOut();
@@ -80,12 +157,11 @@ export default function TabOneScreen() {
     } catch (error) {
       if (error instanceof Error) {
         console.error("Error signing out:", error.message);
-        alert("Sign-out failed: " + (error as Error).message);
+        alert("Sign-out failed: " + error.message);
       } else {
         console.error("Error signing out:", error);
         alert("Sign-out failed");
       }
-      alert("Sign-out failed: " + (error as Error).message);
     }
   };
 
@@ -94,43 +170,88 @@ export default function TabOneScreen() {
   });
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>You're Logged In</Text>
-      <TouchableOpacity style={styles.button} onPress={handleSignOut}>
-        <Text style={styles.buttonText}>Sign Out</Text>
-      </TouchableOpacity>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.logo}>GarudaVirtue</Text>
+      </View>
+
+      {/* Profile Section */}
+      <View style={styles.profileSection}>
+        <Image
+          source={require("@/assets/images/pic-1.jpg")}
+          style={styles.profileImage}
+        />
+        <Text style={styles.profileName}>Nama Pengguna</Text>
+        <Text style={styles.profileDetails}>STEI - 19624567</Text>
+      </View>
+
+      {/* Sign Out Button */}
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} onPress={handleSignOut}>
+          <Text style={styles.buttonText}>Sign Out</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#560216", // Warna utama dari logo
-    padding: 20,
+    flexGrow: 1,
+    backgroundColor: "#560216",
+    padding: 16,
   },
-  title: {
-    fontSize: 28,
-    fontWeight: "800",
-    color: "#f9eedf", // Warna logo
-    marginBottom: 40,
-    textAlign: "center",
+  header: {
+    padding: 16,
+    backgroundColor: "#f9eedf",
+    alignItems: "center",
+    marginBottom: 16,
+    borderRadius: 8,
+  },
+  logo: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#560216",
+  },
+  profileSection: {
+    alignItems: "center",
+    marginBottom: 24,
+  },
+  profileImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 10,
+  },
+  profileName: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#f9eedf",
+    marginBottom: 5,
+  },
+  profileDetails: {
+    fontSize: 16,
+    color: "#f9eedf",
+    marginBottom: 20,
+  },
+  buttonContainer: {
+    alignItems: "center",
+    marginTop: 20,
   },
   button: {
-    backgroundColor: "#f9eedf", // Warna logo
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 10,
+    backgroundColor: "#f9eedf",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   buttonText: {
-    color: "#560216", // Warna latar belakang dari logo
+    color: "#560216",
     fontWeight: "600",
     fontSize: 16,
   },

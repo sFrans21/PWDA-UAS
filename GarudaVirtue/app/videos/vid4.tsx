@@ -7,12 +7,12 @@ const Vid1Screen = () => {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.headerText}>GarudaVirtue - Video 1</Text>
+        <Text style={styles.headerText}>GarudaVirtue - Video 4</Text>
       </View>
 
       {/* Player Wrapper */}
       <View style={styles.playerWrapper}>
-        <YoutubePlayer height={300} play={true} videoId={"xpGJfE-Hg44"} />
+        <YoutubePlayer height={300} play={true} videoId={"ee0nhVDkVBA"} />
       </View>
 
       {/* Description */}

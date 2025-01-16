@@ -455,6 +455,188 @@
 
 // export default HomePage;
 
+// import React from "react";
+// import {
+//   View,
+//   Text,
+//   StyleSheet,
+//   ScrollView,
+//   TouchableOpacity,
+//   Image,
+// } from "react-native";
+// import { useRouter } from "expo-router";
+
+// const HomePage = () => {
+//   const router = useRouter();
+
+//   return (
+//     <ScrollView contentContainerStyle={styles.container}>
+//       <View style={styles.header}>
+//         <Text style={styles.logo}>GarudaVirtue</Text>
+//       </View>
+
+//       <Text style={styles.heading}>Modul Pembelajaran</Text>
+//       <View style={styles.moduleContainer}>
+//         <View style={styles.moduleCard}>
+//           <Image
+//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png")}
+//             style={styles.moduleImage}
+//           />
+//           <Text style={styles.moduleTitle}>Modul 1</Text>
+//           <TouchableOpacity
+//             style={styles.button}
+//             onPress={() => router.push("/modul/modul1")}
+//           >
+//             <Text style={styles.buttonText}>Lihat Modul</Text>
+//           </TouchableOpacity>
+//         </View>
+
+//         <View style={styles.moduleCard}>
+//           <Image
+//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+//             style={styles.moduleImage}
+//           />
+//           <Text style={styles.moduleTitle}>Modul 2</Text>
+//           <TouchableOpacity
+//             style={styles.button}
+//             onPress={() => router.push("/modul/modul2")}
+//           >
+//             <Text style={styles.buttonText}>Lihat Modul</Text>
+//           </TouchableOpacity>
+//         </View>
+
+//         <View style={styles.moduleCard}>
+//           <Image
+//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png")}
+//             style={styles.moduleImage}
+//           />
+//           <Text style={styles.moduleTitle}>Modul 3</Text>
+//           <TouchableOpacity
+//             style={styles.button}
+//             onPress={() => router.push("/modul/modul3")}
+//           >
+//             <Text style={styles.buttonText}>Lihat Modul</Text>
+//           </TouchableOpacity>
+//         </View>
+//         <View style={styles.moduleCard}>
+//           <Image
+//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png")}
+//             style={styles.moduleImage}
+//           />
+//           <Text style={styles.moduleTitle}>Modul 4</Text>
+//           <TouchableOpacity
+//             style={styles.button}
+//             onPress={() => router.push("/modul/modul4")}
+//           >
+//             <Text style={styles.buttonText}>Lihat Modul</Text>
+//           </TouchableOpacity>
+//         </View>
+
+//         <View style={styles.moduleCard}>
+//           <Image
+//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png")}
+//             style={styles.moduleImage}
+//           />
+//           <Text style={styles.moduleTitle}>Modul 5</Text>
+//           <TouchableOpacity
+//             style={styles.button}
+//             onPress={() => router.push("/modul/modul5")}
+//           >
+//             <Text style={styles.buttonText}>Lihat Modul</Text>
+//           </TouchableOpacity>
+//         </View>
+
+//         <View style={styles.moduleCard}>
+//           <Image
+//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png")}
+//             style={styles.moduleImage}
+//           />
+//           <Text style={styles.moduleTitle}>Modul 6</Text>
+//           <TouchableOpacity
+//             style={styles.button}
+//             onPress={() => router.push("/modul/modul6")}
+//           >
+//             <Text style={styles.buttonText}>Lihat Modul</Text>
+//           </TouchableOpacity>
+//         </View>
+
+//         {/* Tambahkan Card untuk Modul 3 sampai Modul 6 dengan pola yang sama */}
+//       </View>
+//     </ScrollView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flexGrow: 1,
+//     backgroundColor: "#560216",
+//     padding: 16,
+//   },
+//   header: {
+//     padding: 16,
+//     backgroundColor: "#f9eedf",
+//     alignItems: "center",
+//     marginBottom: 16,
+//     borderRadius: 8,
+//   },
+//   logo: {
+//     fontSize: 24,
+//     fontWeight: "bold",
+//     color: "#560216",
+//   },
+//   heading: {
+//     fontSize: 22,
+//     fontWeight: "bold",
+//     color: "#f9eedf",
+//     marginBottom: 16,
+//   },
+//   moduleContainer: {
+//     flexDirection: "row",
+//     flexWrap: "wrap",
+//     justifyContent: "space-between",
+//   },
+//   moduleCard: {
+//     backgroundColor: "#f9eedf",
+//     borderRadius: 8,
+//     padding: 8,
+//     marginBottom: 16,
+//     width: "48%",
+//     alignItems: "center",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 4,
+//     elevation: 2,
+//   },
+//   moduleImage: {
+//     width: "100%",
+//     height: 100,
+//     borderRadius: 8,
+//     marginBottom: 8,
+//   },
+//   moduleTitle: {
+//     fontSize: 16,
+//     fontWeight: "bold",
+//     color: "#560216",
+//     marginBottom: 8,
+//     textAlign: "center",
+//   },
+//   button: {
+//     backgroundColor: "#560216",
+//     paddingVertical: 10,
+//     borderRadius: 5,
+//     alignItems: "center",
+//     width: "100%",
+//   },
+//   buttonText: {
+//     color: "#f9eedf",
+//     fontWeight: "600",
+//     fontSize: 14,
+//   },
+// });
+
+// export default HomePage;
+
 import React from "react";
 import {
   View,
@@ -474,7 +656,12 @@ const HomePage = () => {
       <View style={styles.header}>
         <Text style={styles.logo}>GarudaVirtue</Text>
       </View>
-
+      <TouchableOpacity
+        style={styles.silabusButton}
+        onPress={() => router.push("/silabus")}
+      >
+        <Text style={styles.silabusButtonText}>Lihat Silabus</Text>
+      </TouchableOpacity>
       <Text style={styles.heading}>Modul Pembelajaran</Text>
       <View style={styles.moduleContainer}>
         <View style={styles.moduleCard}>
@@ -507,7 +694,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 3</Text>
@@ -520,7 +707,7 @@ const HomePage = () => {
         </View>
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 4</Text>
@@ -534,7 +721,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 5</Text>
@@ -548,7 +735,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 6</Text>
@@ -559,7 +746,95 @@ const HomePage = () => {
             <Text style={styles.buttonText}>Lihat Modul</Text>
           </TouchableOpacity>
         </View>
-        {/* Tambahkan Card untuk Modul 3 sampai Modul 6 dengan pola yang sama */}
+      </View>
+
+      {/* Playlist Video */}
+      <Text style={styles.heading}>Playlist Video</Text>
+      <View style={styles.videoContainer}>
+        <View style={styles.videoCard}>
+          <Image
+            source={require("@/assets/images/12.jpg")} // Thumbnail untuk Video 1
+            style={styles.videoThumbnail}
+          />
+          <Text style={styles.videoTitle}>Video 1</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/videos/vid1")}
+          >
+            <Text style={styles.buttonText}>Lihat Video</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.videoCard}>
+          <Image
+            source={require("@/assets/images/13.jpg")} // Thumbnail untuk Video 1
+            style={styles.videoThumbnail}
+          />
+          <Text style={styles.videoTitle}>Video 2</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/videos/vid2")}
+          >
+            <Text style={styles.buttonText}>Lihat Video</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.videoCard}>
+          <Image
+            source={require("@/assets/images/14.jpg")} // Thumbnail untuk Video 2
+            style={styles.videoThumbnail}
+          />
+          <Text style={styles.videoTitle}>Video 3</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/videos/vid3")}
+          >
+            <Text style={styles.buttonText}>Lihat Video</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.videoCard}>
+          <Image
+            source={require("@/assets/images/15.jpg")} // Thumbnail untuk Video 2
+            style={styles.videoThumbnail}
+          />
+          <Text style={styles.videoTitle}>Video 4</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/videos/vid4")}
+          >
+            <Text style={styles.buttonText}>Lihat Video</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.videoCard}>
+          <Image
+            source={require("@/assets/images/16.jpg")} // Thumbnail untuk Video 2
+            style={styles.videoThumbnail}
+          />
+          <Text style={styles.videoTitle}>Video 5</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/videos/vid5")}
+          >
+            <Text style={styles.buttonText}>Lihat Video</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.videoCard}>
+          <Image
+            source={require("@/assets/images/17.jpg")} // Thumbnail untuk Video 2
+            style={styles.videoThumbnail}
+          />
+          <Text style={styles.videoTitle}>Video 6</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/videos/vid6")}
+          >
+            <Text style={styles.buttonText}>Lihat Video</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Tambahkan Card untuk Video 3 hingga Video 6 */}
       </View>
     </ScrollView>
   );
@@ -607,6 +882,18 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
+  silabusButton: {
+    backgroundColor: "#f9eedf",
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 16,
+    alignItems: "center",
+  },
+  silabusButtonText: {
+    color: "#560216",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
   moduleImage: {
     width: "100%",
     height: 100,
@@ -614,6 +901,37 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   moduleTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#560216",
+    marginBottom: 8,
+    textAlign: "center",
+  },
+  videoContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  videoCard: {
+    backgroundColor: "#f9eedf",
+    borderRadius: 8,
+    padding: 8,
+    marginBottom: 16,
+    width: "48%",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  videoThumbnail: {
+    width: "100%",
+    height: 100,
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  videoTitle: {
     fontSize: 16,
     fontWeight: "bold",
     color: "#560216",

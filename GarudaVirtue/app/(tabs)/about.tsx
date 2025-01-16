@@ -26,8 +26,8 @@ const AboutScreen = () => {
 
       <View style={styles.sectionContainer}>
         <Text style={styles.subHeading}>Fitur Utama:</Text>
-        <Text style={styles.featureItem}>- Modul Interaktif</Text>
-        <Text style={styles.featureItem}>- Virtual Labs</Text>
+        <Text style={styles.featureItem}>- Modul & Video Interaktif</Text>
+        <Text style={styles.featureItem}>- Virtual Lab</Text>
         <Text style={styles.featureItem}>- Track Progress Pembelajaran</Text>
       </View>
     </ScrollView>
