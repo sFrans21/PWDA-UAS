@@ -1,121 +1,99 @@
-// import { Image, StyleSheet, Platform } from "react-native";
+import React from "react";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 
-// import { HelloWave } from "@/components/HelloWave";
-// import ParallaxScrollView from "@/components/ParallaxScrollView";
-// import { ThemedText } from "@/components/ThemedText";
-// import { ThemedView } from "@/components/ThemedView";
-
-// export default function HomeScreen() {
-//   return (
-//     <ParallaxScrollView
-//       headerBackgroundColor={{ light: "#A1CEDC", dark: "#3b0a0a" }}
-//       headerImage={
-//         <Image
-//           source={require("@/assets/images/partial-react-logo.png")}
-//           style={styles.reactLogo}
-//         />
-//       }
-//     >
-//       <ThemedView style={styles.titleContainer}>
-//         <ThemedText type="title">GarudaVirtue</ThemedText>
-//         <HelloWave />
-//       </ThemedView>
-//       <ThemedView style={styles.stepContainer}>
-//         <ThemedText type="subtitle">Brief Description</ThemedText>
-//         <ThemedText>
-//           GarudaVirtue merupakan sebuah platform website yang dirancang khusus
-//           untuk mendukung proses pembelajaran mahasiswa Institut Teknologi
-//           Bandung (ITB), terutama bagi mahasiswa tingkat pertama (Tahun Pertama
-//           Bersama atau TPB). Platform ini berfokus pada mata kuliah Pancasila
-//           dan Pendidikan Kewarganegaraan (KU2071), yang merupakan salah satu
-//           mata kuliah wajib di ITB. Dengan hadirnya GarudaVirtue, diharapkan
-//           mahasiswa dapat mengakses materi pembelajaran yang disajikan dengan
-//           cara yang lebih interaktif dan menarik.
-//         </ThemedText>
-//       </ThemedView>
-//       <ThemedView style={styles.stepContainer}></ThemedView>
-//       <ThemedView style={styles.stepContainer}></ThemedView>
-//     </ParallaxScrollView>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   titleContainer: {
-//     flexDirection: "row",
-//     alignItems: "center",
-//     gap: 8,
-//   },
-//   stepContainer: {
-//     gap: 8,
-//     marginBottom: 8,
-//   },
-//   reactLogo: {
-//     height: 178,
-//     width: 290,
-//     bottom: 0,
-//     left: 0,
-//     position: "absolute",
-//   },
-// });
-
-import { Image, StyleSheet, Platform, View, Text, Button } from "react-native";
-
-import { HelloWave } from "@/components/HelloWave";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
-
-export default function HomeScreen() {
+const AboutScreen = () => {
   return (
-    <View style={styles.container}>
-      {/* Gambar */}
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.logo}>GarudaVirtue</Text>
+      </View>
+
       <Image
         source={require("@/assets/images/edunex.png")}
         style={styles.image}
       />
-      {/* Konten */}
+
       <Text style={styles.heading}>
-        Pancasila dan Pendidikan Kewarganegaraan (KU2071)
+        Pancasila dan Pendidikan Kewarganegaraan
       </Text>
       <Text style={styles.description}>
-        GarudaVirtue merupakan sebuah platform website yang dirancang khusus
+        GarudaVirtue merupakan platform pembelajaran interaktif yang dirancang
         untuk mendukung proses pembelajaran mahasiswa Institut Teknologi Bandung
-        (ITB), terutama bagi mahasiswa tingkat pertama (Tahun Pertama Bersama
-        atau TPB). Platform ini berfokus pada mata kuliah Pancasila dan
-        Pendidikan Kewarganegaraan (KU2071), yang merupakan salah satu mata
-        kuliah wajib di ITB. Dengan hadirnya GarudaVirtue, diharapkan mahasiswa
-        dapat mengakses materi pembelajaran yang disajikan dengan cara yang
-        lebih interaktif dan menarik.
+        (ITB). Fokus utama platform ini adalah membantu mahasiswa memahami mata
+        kuliah Pancasila dan Pendidikan Kewarganegaraan (KU2071) dengan cara
+        yang lebih menarik dan mudah diakses.
       </Text>
-      {/* <Button
-        title="Lihat Modul"
-        onPress={() => navigation.navigate("Modul")}
-        color="#007BFF"
-      /> */}
-    </View>
+
+      <View style={styles.sectionContainer}>
+        <Text style={styles.subHeading}>Fitur Utama:</Text>
+        <Text style={styles.featureItem}>- Modul Interaktif</Text>
+        <Text style={styles.featureItem}>- Virtual Labs</Text>
+        <Text style={styles.featureItem}>- Track Progress Pembelajaran</Text>
+      </View>
+    </ScrollView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: "#fff",
+    flexGrow: 1,
+    backgroundColor: "#560216",
+    padding: 16,
+  },
+  header: {
+    padding: 16,
+    backgroundColor: "#f9eedf",
+    alignItems: "center",
+    marginBottom: 16,
+    borderRadius: 8,
+  },
+  logo: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#560216",
   },
   image: {
     width: "100%",
     height: 200,
     resizeMode: "contain",
     marginBottom: 20,
+    borderRadius: 10,
   },
   heading: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "bold",
-    marginBottom: 10,
+    color: "#f9eedf",
+    marginBottom: 16,
+    textAlign: "center",
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
+    color: "#f9eedf",
+    textAlign: "justify",
     marginBottom: 20,
   },
+  sectionContainer: {
+    backgroundColor: "#f9eedf",
+    padding: 16,
+    borderRadius: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  subHeading: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#560216",
+    marginBottom: 10,
+  },
+  featureItem: {
+    fontSize: 16,
+    color: "#560216",
+    marginBottom: 8,
+  },
 });
+
+export default AboutScreen;

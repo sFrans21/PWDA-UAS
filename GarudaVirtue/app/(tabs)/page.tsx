@@ -179,112 +179,33 @@ const images = [
   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png"),
 ];
 
-// Komponen untuk kartu modul
-const ModuleCard: React.FC<{ title: string; image: any }> = ({
-  title,
-  image,
-}) => {
-  return (
-    <View style={styles.moduleCard}>
-      <Image source={image} style={styles.moduleImage} />
-      <View style={styles.textContainer}>
-        <Text style={styles.moduleTitle}>{title}</Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Lihat Modul</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-};
+interface ModuleCardProps {
+  title: string;
+  image: any;
+}
 
-const HomePage: React.FC = () => {
+const ModuleCard: React.FC<ModuleCardProps> = ({ title, image }) => (
+  <View style={styles.moduleCard}>
+    <Image source={image} style={styles.moduleImage} />
+    <Text style={styles.moduleTitle}>{title}</Text>
+    <TouchableOpacity style={styles.button}>
+      <Text style={styles.buttonText}>Lihat Modul</Text>
+    </TouchableOpacity>
+  </View>
+);
+
+const HomePage = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.logo}>GarudaVirtue</Text>
       </View>
 
-      {/* Opsi Singkat */}
-      <View style={styles.section}>
-        <Text style={styles.heading}>Opsi Singkat</Text>
-        <View style={styles.rowContainer}>
-          {/* Statistik */}
-          <View style={styles.box}>
-            <Text style={styles.title}>Statistik</Text>
-            <Text style={styles.text}>
-              Jumlah Like: <Text style={styles.highlight}>25</Text>
-            </Text>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>View Likes</Text>
-            </TouchableOpacity>
-            <Text style={styles.text}>
-              Jumlah Komentar: <Text style={styles.highlight}>12</Text>
-            </Text>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>View Comments</Text>
-            </TouchableOpacity>
-            <Text style={styles.text}>
-              Playlist yang Disimpan: <Text style={styles.highlight}>4</Text>
-            </Text>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Lihat Modul</Text>
-            </TouchableOpacity>
-          </View>
-
-          {/* Topik */}
-          <View style={styles.box}>
-            <Text style={styles.title}>Topik</Text>
-            <TouchableOpacity>
-              <Text style={styles.link}>Pancasila sebagai ideologi negara</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.link}>Hak dan Kewajiban Warga Negara</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.link}>Negara Hukum dan Demokrasi</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.link}>Kedaulatan Rakyat</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.link}>Konstitusi dan UUD 1945</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.link}>
-                Bela Negara dan Pertahanan Nasional
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Text style={styles.link}>Globalisasi dan Nasionalisme</Text>
-            </TouchableOpacity>
-          </View>
-
-          {/* Silabus */}
-          <View style={styles.box}>
-            <Text style={styles.title}>Silabus</Text>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Lihat Silabus</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
-
-      {/* Modul */}
-      <View style={styles.section}>
-        <Text style={styles.heading}>Modul</Text>
-        <View style={styles.moduleContainer}>
-          {images.map((image, index) => (
-            <ModuleCard
-              key={index}
-              title={`Modul ${index + 1}`}
-              image={image}
-            />
-          ))}
-        </View>
-        <TouchableOpacity style={styles.fullButton}>
-          <Text style={styles.buttonText}>Lihat Semua Modul</Text>
-        </TouchableOpacity>
+      <Text style={styles.heading}>Modul Pembelajaran</Text>
+      <View style={styles.moduleContainer}>
+        {images.map((image, index) => (
+          <ModuleCard key={index} title={`Modul ${index + 1}`} image={image} />
+        ))}
       </View>
     </ScrollView>
   );
@@ -293,77 +214,26 @@ const HomePage: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#f8f8f8",
+    backgroundColor: "#560216",
     padding: 16,
   },
   header: {
     padding: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#f9eedf",
     alignItems: "center",
     marginBottom: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
+    borderRadius: 8,
   },
   logo: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#333",
-  },
-  section: {
-    marginBottom: 24,
+    color: "#560216",
   },
   heading: {
     fontSize: 22,
     fontWeight: "bold",
+    color: "#f9eedf",
     marginBottom: 16,
-    color: "#333",
-  },
-  rowContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  box: {
-    backgroundColor: "#fff",
-    borderRadius: 8,
-    padding: 16,
-    marginBottom: 16,
-    width: "30%",
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
-    marginBottom: 8,
-  },
-  text: {
-    fontSize: 14,
-    color: "#555",
-    marginBottom: 8,
-  },
-  highlight: {
-    color: "#C05621",
-    fontWeight: "bold",
-  },
-  link: {
-    fontSize: 14,
-    color: "#333",
-    marginBottom: 8,
-  },
-  button: {
-    backgroundColor: "#C05621",
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 5,
-    alignItems: "center",
-    marginTop: 8,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 14,
   },
   moduleContainer: {
     flexDirection: "row",
@@ -371,12 +241,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   moduleCard: {
-    backgroundColor: "#fff",
+    backgroundColor: "#f9eedf",
     borderRadius: 8,
     padding: 8,
     marginBottom: 16,
     width: "48%",
+    alignItems: "center",
     shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
@@ -387,21 +259,24 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 8,
   },
-  textContainer: {
-    paddingHorizontal: 8,
-  },
   moduleTitle: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#333",
+    color: "#560216",
     marginBottom: 8,
     textAlign: "center",
   },
-  fullButton: {
-    backgroundColor: "#333",
-    paddingVertical: 12,
+  button: {
+    backgroundColor: "#560216",
+    paddingVertical: 10,
     borderRadius: 5,
     alignItems: "center",
+    width: "100%",
+  },
+  buttonText: {
+    color: "#f9eedf",
+    fontWeight: "600",
+    fontSize: 14,
   },
 });
 
