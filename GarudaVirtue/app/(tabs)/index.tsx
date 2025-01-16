@@ -136,7 +136,128 @@
 //   },
 // });
 
-import React from "react";
+// import React from "react";
+// import {
+//   StyleSheet,
+//   TouchableOpacity,
+//   Text,
+//   View,
+//   Image,
+//   ScrollView,
+// } from "react-native";
+// import { auth } from "../../FirebaseConfig";
+// import { router } from "expo-router";
+// import { getAuth } from "firebase/auth";
+
+// export default function MergedScreen() {
+//   const handleSignOut = async () => {
+//     try {
+//       await auth.signOut();
+//       router.replace("/");
+//     } catch (error) {
+//       if (error instanceof Error) {
+//         console.error("Error signing out:", error.message);
+//         alert("Sign-out failed: " + error.message);
+//       } else {
+//         console.error("Error signing out:", error);
+//         alert("Sign-out failed");
+//       }
+//     }
+//   };
+
+//   getAuth().onAuthStateChanged((user) => {
+//     if (!user) router.replace("/");
+//   });
+
+//   return (
+//     <ScrollView contentContainerStyle={styles.container}>
+//       {/* Header */}
+//       <View style={styles.header}>
+//         <Text style={styles.logo}>GarudaVirtue</Text>
+//       </View>
+
+//       {/* Profile Section */}
+//       <View style={styles.profileSection}>
+//         <Image
+//           source={require("@/assets/images/pic-1.jpg")}
+//           style={styles.profileImage}
+//         />
+//         <Text style={styles.profileName}>Nama Pengguna</Text>
+//         <Text style={styles.profileDetails}>NIM</Text>
+//       </View>
+
+//       {/* Sign Out Button */}
+//       <View style={styles.buttonContainer}>
+//         <TouchableOpacity style={styles.button} onPress={handleSignOut}>
+//           <Text style={styles.buttonText}>Sign Out</Text>
+//         </TouchableOpacity>
+//       </View>
+//     </ScrollView>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flexGrow: 1,
+//     backgroundColor: "#560216",
+//     padding: 16,
+//   },
+//   header: {
+//     padding: 16,
+//     backgroundColor: "#f9eedf",
+//     alignItems: "center",
+//     marginBottom: 16,
+//     borderRadius: 8,
+//   },
+//   logo: {
+//     fontSize: 24,
+//     fontWeight: "bold",
+//     color: "#560216",
+//   },
+//   profileSection: {
+//     alignItems: "center",
+//     marginBottom: 24,
+//   },
+//   profileImage: {
+//     width: 100,
+//     height: 100,
+//     borderRadius: 50,
+//     marginBottom: 10,
+//   },
+//   profileName: {
+//     fontSize: 20,
+//     fontWeight: "bold",
+//     color: "#f9eedf",
+//     marginBottom: 5,
+//   },
+//   profileDetails: {
+//     fontSize: 16,
+//     color: "#f9eedf",
+//     marginBottom: 20,
+//   },
+//   buttonContainer: {
+//     alignItems: "center",
+//     marginTop: 20,
+//   },
+//   button: {
+//     backgroundColor: "#f9eedf",
+//     paddingVertical: 12,
+//     paddingHorizontal: 20,
+//     borderRadius: 8,
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 4,
+//     elevation: 3,
+//   },
+//   buttonText: {
+//     color: "#560216",
+//     fontWeight: "600",
+//     fontSize: 16,
+//   },
+// });
+
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   TouchableOpacity,
@@ -145,11 +266,14 @@ import {
   Image,
   ScrollView,
 } from "react-native";
-import { auth } from "../../FirebaseConfig";
+import { auth, firestore } from "../../FirebaseConfig";
 import { router } from "expo-router";
+import { doc, getDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 export default function MergedScreen() {
+  const [userData, setUserData] = useState<any>(null); // State untuk menyimpan data pengguna
+
   const handleSignOut = async () => {
     try {
       await auth.signOut();
@@ -165,6 +289,30 @@ export default function MergedScreen() {
     }
   };
 
+  // Fungsi untuk mengambil data pengguna dari Firestore
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const user = auth.currentUser; // Ambil pengguna yang sedang login
+        if (user) {
+          const docRef = doc(firestore, "users", user.uid); // Referensi ke dokumen pengguna
+          const docSnap = await getDoc(docRef); // Ambil data dari Firestore
+
+          if (docSnap.exists()) {
+            setUserData(docSnap.data()); // Simpan data pengguna ke state
+          } else {
+            console.log("No such document!");
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  // Redirect ke halaman login jika pengguna tidak ada
   getAuth().onAuthStateChanged((user) => {
     if (!user) router.replace("/");
   });
@@ -182,8 +330,12 @@ export default function MergedScreen() {
           source={require("@/assets/images/pic-1.jpg")}
           style={styles.profileImage}
         />
-        <Text style={styles.profileName}>Nama Pengguna</Text>
-        <Text style={styles.profileDetails}>STEI - 19624567</Text>
+        <Text style={styles.profileName}>
+          {userData ? userData.name : "Loading..."}
+        </Text>
+        <Text style={styles.profileDetails}>
+          {userData ? userData.nim : "Loading..."}
+        </Text>
       </View>
 
       {/* Sign Out Button */}

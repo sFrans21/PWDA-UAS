@@ -8,15 +8,23 @@ import {
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { auth } from "@/FirebaseConfig";
+import { getFirestore } from "firebase/firestore";
+
+const firestore = getFirestore();
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { setDoc, doc } from "firebase/firestore"; // Import Firestore
+
 import { router } from "expo-router";
 
 const index = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState(""); // Untuk nama
+  const [nim, setNim] = useState(""); // Untuk NIM
+  const [isSignUp, setIsSignUp] = useState(false); // Mode Sign Up atau Sign In
 
   const signIn = async () => {
     try {
@@ -29,7 +37,25 @@ const index = () => {
   };
   const signUp = async () => {
     try {
-      const user = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      // Simpan nama dan NIM di database jika diperlukan
+      const { user } = userCredential;
+
+      // Simpan nama dan NIM di Firestore
+      await setDoc(doc(firestore, "users", user.uid), {
+        name: name, // Nama pengguna
+        nim: nim, // NIM pengguna
+        email: email, // Email pengguna
+        createdAt: new Date(), // Timestamp
+      });
+
+      console.log("User signed up:", { uid: user.uid, name, nim });
+
       if (user) router.replace("/(tabs)");
     } catch (error: any) {
       console.log(error);
@@ -40,7 +66,9 @@ const index = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>GarudaVirtue</Text>
-      <Text style={styles.subtitle}>Sign in or create an account</Text>
+      <Text style={styles.subtitle}>
+        {isSignUp ? "Create an Account" : "Sign In to Continue"}
+      </Text>
 
       <TextInput
         style={styles.input}
@@ -59,11 +87,43 @@ const index = () => {
         secureTextEntry
       />
 
-      <TouchableOpacity style={styles.buttonPrimary} onPress={signIn}>
-        <Text style={styles.buttonText}>Login</Text>
+      {/* Input Nama dan NIM hanya untuk Sign Up */}
+      {isSignUp && (
+        <>
+          <TextInput
+            style={styles.input}
+            placeholder="Nama"
+            placeholderTextColor="#999"
+            value={name}
+            onChangeText={setName}
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="NIM"
+            placeholderTextColor="#999"
+            value={nim}
+            onChangeText={setNim}
+            keyboardType="numeric"
+          />
+        </>
+      )}
+
+      {/* Tombol Login atau Sign Up */}
+      <TouchableOpacity
+        style={styles.buttonPrimary}
+        onPress={isSignUp ? signUp : signIn}
+      >
+        <Text style={styles.buttonText}>{isSignUp ? "Sign Up" : "Login"}</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonSecondary} onPress={signUp}>
-        <Text style={styles.buttonTextSecondary}>Sign Up</Text>
+
+      {/* Tombol untuk Ganti Mode */}
+      <TouchableOpacity
+        style={styles.buttonSecondary}
+        onPress={() => setIsSignUp(!isSignUp)}
+      >
+        <Text style={styles.buttonTextSecondary}>
+          {isSignUp ? "Already have an account? Login" : "Create an Account"}
+        </Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
