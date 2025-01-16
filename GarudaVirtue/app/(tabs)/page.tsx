@@ -159,6 +159,302 @@
 
 // export default HomePage;
 
+// import React from "react";
+// import {
+//   View,
+//   Text,
+//   StyleSheet,
+//   ScrollView,
+//   TouchableOpacity,
+//   Image,
+// } from "react-native";
+// import { useRouter } from "expo-router";
+
+// // Impor gambar dari folder assets
+// const images = [
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png"),
+// ];
+
+// interface ModuleCardProps {
+//   title: string;
+//   image: any;
+// }
+
+// const ModuleCard: React.FC<ModuleCardProps> = ({ title, image }) => (
+//   <View style={styles.moduleCard}>
+//     <Image source={image} style={styles.moduleImage} />
+//     <Text style={styles.moduleTitle}>{title}</Text>
+//     <TouchableOpacity style={styles.button}>
+//       <Text style={styles.buttonText}>Lihat Modul</Text>
+//     </TouchableOpacity>
+//   </View>
+// );
+
+// const HomePage = () => {
+//   const router = useRouter();
+
+//   return (
+//     <ScrollView contentContainerStyle={styles.container}>
+//       <View style={styles.header}>
+//         <Text style={styles.logo}>GarudaVirtue</Text>
+//       </View>
+
+//       <TouchableOpacity
+//         style={styles.silabusButton}
+//         onPress={() => router.push("/silabus")}
+//       >
+//         <Text style={styles.silabusButtonText}>Lihat Silabus</Text>
+//       </TouchableOpacity>
+
+//       <Text style={styles.heading}>Modul Pembelajaran</Text>
+//       <View style={styles.moduleContainer}>
+//         {images.map((image, index) => (
+//           <ModuleCard key={index} title={`Modul ${index + 1}`} image={image} />
+//         ))}
+//       </View>
+//     </ScrollView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flexGrow: 1,
+//     backgroundColor: "#560216",
+//     padding: 16,
+//   },
+//   header: {
+//     padding: 16,
+//     backgroundColor: "#f9eedf",
+//     alignItems: "center",
+//     marginBottom: 16,
+//     borderRadius: 8,
+//   },
+//   logo: {
+//     fontSize: 24,
+//     fontWeight: "bold",
+//     color: "#560216",
+//   },
+//   silabusButton: {
+//     backgroundColor: "#f9eedf",
+//     padding: 12,
+//     borderRadius: 8,
+//     marginBottom: 16,
+//     alignItems: "center",
+//   },
+//   silabusButtonText: {
+//     color: "#560216",
+//     fontWeight: "bold",
+//     fontSize: 16,
+//   },
+//   heading: {
+//     fontSize: 22,
+//     fontWeight: "bold",
+//     color: "#f9eedf",
+//     marginBottom: 16,
+//   },
+//   moduleContainer: {
+//     flexDirection: "row",
+//     flexWrap: "wrap",
+//     justifyContent: "space-between",
+//   },
+//   moduleCard: {
+//     backgroundColor: "#f9eedf",
+//     borderRadius: 8,
+//     padding: 8,
+//     marginBottom: 16,
+//     width: "48%",
+//     alignItems: "center",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 4,
+//     elevation: 2,
+//   },
+//   moduleImage: {
+//     width: "100%",
+//     height: 100,
+//     borderRadius: 8,
+//     marginBottom: 8,
+//   },
+//   moduleTitle: {
+//     fontSize: 16,
+//     fontWeight: "bold",
+//     color: "#560216",
+//     marginBottom: 8,
+//     textAlign: "center",
+//   },
+//   button: {
+//     backgroundColor: "#560216",
+//     paddingVertical: 10,
+//     borderRadius: 5,
+//     alignItems: "center",
+//     width: "100%",
+//   },
+//   buttonText: {
+//     color: "#f9eedf",
+//     fontWeight: "600",
+//     fontSize: 14,
+//   },
+// });
+
+// export default HomePage;
+
+// import React from "react";
+// import {
+//   View,
+//   Text,
+//   StyleSheet,
+//   ScrollView,
+//   TouchableOpacity,
+//   Image,
+// } from "react-native";
+// import { useRouter } from "expo-router";
+
+// // Impor gambar dari folder assets
+// const images = [
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png"),
+//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png"),
+// ];
+
+// interface ModuleCardProps {
+//   title: string;
+//   image: any;
+//   onPress: () => void;
+// }
+
+// const ModuleCard: React.FC<ModuleCardProps> = ({ title, image, onPress }) => (
+//   <View style={styles.moduleCard}>
+//     <Image source={image} style={styles.moduleImage} />
+//     <Text style={styles.moduleTitle}>{title}</Text>
+//     <TouchableOpacity style={styles.button} onPress={onPress}>
+//       <Text style={styles.buttonText}>Lihat Modul</Text>
+//     </TouchableOpacity>
+//   </View>
+// );
+
+// const HomePage = () => {
+//   const router = useRouter();
+
+//   return (
+//     <ScrollView contentContainerStyle={styles.container}>
+//       <View style={styles.header}>
+//         <Text style={styles.logo}>GarudaVirtue</Text>
+//       </View>
+
+//       <TouchableOpacity
+//         style={styles.silabusButton}
+//         onPress={() => router.push("/silabus")}
+//       >
+//         <Text style={styles.silabusButtonText}>Lihat Silabus</Text>
+//       </TouchableOpacity>
+
+//       <Text style={styles.heading}>Modul Pembelajaran</Text>
+//       <View style={styles.moduleContainer}>
+//         {images.map((image, index) => (
+//           <ModuleCard
+//             key={index}
+//             title={`Modul ${index + 1}`}
+//             image={image}
+//             onPress={() => router.push(`/modul/modul${index + 1}`)}
+//           />
+//         ))}
+//       </View>
+//     </ScrollView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flexGrow: 1,
+//     backgroundColor: "#560216",
+//     padding: 16,
+//   },
+//   header: {
+//     padding: 16,
+//     backgroundColor: "#f9eedf",
+//     alignItems: "center",
+//     marginBottom: 16,
+//     borderRadius: 8,
+//   },
+//   logo: {
+//     fontSize: 24,
+//     fontWeight: "bold",
+//     color: "#560216",
+//   },
+//   silabusButton: {
+//     backgroundColor: "#f9eedf",
+//     padding: 12,
+//     borderRadius: 8,
+//     marginBottom: 16,
+//     alignItems: "center",
+//   },
+//   silabusButtonText: {
+//     color: "#560216",
+//     fontWeight: "bold",
+//     fontSize: 16,
+//   },
+//   heading: {
+//     fontSize: 22,
+//     fontWeight: "bold",
+//     color: "#f9eedf",
+//     marginBottom: 16,
+//   },
+//   moduleContainer: {
+//     flexDirection: "row",
+//     flexWrap: "wrap",
+//     justifyContent: "space-between",
+//   },
+//   moduleCard: {
+//     backgroundColor: "#f9eedf",
+//     borderRadius: 8,
+//     padding: 8,
+//     marginBottom: 16,
+//     width: "48%",
+//     alignItems: "center",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 4,
+//     elevation: 2,
+//   },
+//   moduleImage: {
+//     width: "100%",
+//     height: 100,
+//     borderRadius: 8,
+//     marginBottom: 8,
+//   },
+//   moduleTitle: {
+//     fontSize: 16,
+//     fontWeight: "bold",
+//     color: "#560216",
+//     marginBottom: 8,
+//     textAlign: "center",
+//   },
+//   button: {
+//     backgroundColor: "#560216",
+//     paddingVertical: 10,
+//     borderRadius: 5,
+//     alignItems: "center",
+//     width: "100%",
+//   },
+//   buttonText: {
+//     color: "#f9eedf",
+//     fontWeight: "600",
+//     fontSize: 14,
+//   },
+// });
+
+// export default HomePage;
+
 import React from "react";
 import {
   View,
@@ -168,33 +464,11 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-
-// Impor gambar dari folder assets
-const images = [
-  require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png"),
-  require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png"),
-  require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png"),
-  require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png"),
-  require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png"),
-  require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png"),
-];
-
-interface ModuleCardProps {
-  title: string;
-  image: any;
-}
-
-const ModuleCard: React.FC<ModuleCardProps> = ({ title, image }) => (
-  <View style={styles.moduleCard}>
-    <Image source={image} style={styles.moduleImage} />
-    <Text style={styles.moduleTitle}>{title}</Text>
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Lihat Modul</Text>
-    </TouchableOpacity>
-  </View>
-);
+import { useRouter } from "expo-router";
 
 const HomePage = () => {
+  const router = useRouter();
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
@@ -203,9 +477,89 @@ const HomePage = () => {
 
       <Text style={styles.heading}>Modul Pembelajaran</Text>
       <View style={styles.moduleContainer}>
-        {images.map((image, index) => (
-          <ModuleCard key={index} title={`Modul ${index + 1}`} image={image} />
-        ))}
+        <View style={styles.moduleCard}>
+          <Image
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png")}
+            style={styles.moduleImage}
+          />
+          <Text style={styles.moduleTitle}>Modul 1</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/modul/modul1")}
+          >
+            <Text style={styles.buttonText}>Lihat Modul</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.moduleCard}>
+          <Image
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            style={styles.moduleImage}
+          />
+          <Text style={styles.moduleTitle}>Modul 2</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/modul/modul2")}
+          >
+            <Text style={styles.buttonText}>Lihat Modul</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.moduleCard}>
+          <Image
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            style={styles.moduleImage}
+          />
+          <Text style={styles.moduleTitle}>Modul 3</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/modul/modul3")}
+          >
+            <Text style={styles.buttonText}>Lihat Modul</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.moduleCard}>
+          <Image
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            style={styles.moduleImage}
+          />
+          <Text style={styles.moduleTitle}>Modul 4</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/modul/modul4")}
+          >
+            <Text style={styles.buttonText}>Lihat Modul</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.moduleCard}>
+          <Image
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            style={styles.moduleImage}
+          />
+          <Text style={styles.moduleTitle}>Modul 5</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/modul/modul5")}
+          >
+            <Text style={styles.buttonText}>Lihat Modul</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.moduleCard}>
+          <Image
+            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            style={styles.moduleImage}
+          />
+          <Text style={styles.moduleTitle}>Modul 6</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => router.push("/modul/modul6")}
+          >
+            <Text style={styles.buttonText}>Lihat Modul</Text>
+          </TouchableOpacity>
+        </View>
+        {/* Tambahkan Card untuk Modul 3 sampai Modul 6 dengan pola yang sama */}
       </View>
     </ScrollView>
   );

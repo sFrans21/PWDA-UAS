@@ -38,6 +38,34 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="silabus"
+          options={{ title: "Silabus", headerShown: true }}
+        />
+        <Stack.Screen
+          name="modul/modul1"
+          options={{ title: "Modul 1", headerShown: true }}
+        />
+        <Stack.Screen
+          name="modul/modul2"
+          options={{ title: "Modul 2", headerShown: true }}
+        />
+        <Stack.Screen
+          name="modul/modul3"
+          options={{ title: "Modul 3", headerShown: true }}
+        />
+        <Stack.Screen
+          name="modul/modul4"
+          options={{ title: "Modul 4", headerShown: true }}
+        />
+        <Stack.Screen
+          name="modul/modul5"
+          options={{ title: "Modul 5", headerShown: true }}
+        />
+        <Stack.Screen
+          name="modul/modul6"
+          options={{ title: "Modul 6", headerShown: true }}
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
