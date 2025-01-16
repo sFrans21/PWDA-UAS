@@ -7,6 +7,7 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 import React from "react";
 import {
@@ -191,7 +192,7 @@ export default function TabLayout() {
         options={{
           title: "About",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Icon name="question-circle" size={28} color={color} />
           ),
         }}
       />
@@ -201,7 +202,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Icon name="home" size={28} color={color} />
           ),
         }}
       />
@@ -210,7 +211,7 @@ export default function TabLayout() {
         options={{
           title: "Lab",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Icon name="flask" size={28} color={color} />
           ),
         }}
       />
@@ -239,7 +240,7 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Icon name="user-circle" size={28} color={color} />
           ),
         }}
       />

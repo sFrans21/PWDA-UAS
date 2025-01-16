@@ -1,8 +1,19 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import YoutubePlayer from "react-native-youtube-iframe";
 
 const Vid1Screen = () => {
+  const [isLiked, setIsLiked] = useState(false); // Status apakah tombol sudah di-like
+  const [totalLikes, setTotalLikes] = useState(0); // Jumlah total like
+
+  const toggleLike = () => {
+    if (isLiked) {
+      setTotalLikes(totalLikes - 1); // Kurangi jumlah like
+    } else {
+      setTotalLikes(totalLikes + 1); // Tambahkan jumlah like
+    }
+    setIsLiked(!isLiked); // Ubah status tombol like
+  };
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -13,6 +24,18 @@ const Vid1Screen = () => {
       {/* Player Wrapper */}
       <View style={styles.playerWrapper}>
         <YoutubePlayer height={300} play={true} videoId={"ee0nhVDkVBA"} />
+      </View>
+
+      {/* Like Button */}
+      <View style={styles.likeContainer}>
+        <TouchableOpacity
+          style={[styles.likeButton, isLiked && styles.liked]}
+          onPress={toggleLike}
+        >
+          <Text style={styles.likeButtonText}>
+            {isLiked ? "Liked" : "Like"} ({totalLikes})
+          </Text>
+        </TouchableOpacity>
       </View>
 
       {/* Description */}
@@ -51,6 +74,29 @@ const styles = StyleSheet.create({
     aspectRatio: 16 / 9,
     backgroundColor: "#000",
     marginVertical: 16,
+  },
+  likeContainer: {
+    alignItems: "center",
+    marginBottom: 16,
+  },
+  likeButton: {
+    backgroundColor: "#f9eedf",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  liked: {
+    backgroundColor: "#4CAF50", // Hijau untuk status liked
+  },
+  likeButtonText: {
+    color: "#560216",
+    fontWeight: "600",
+    fontSize: 16,
   },
   descriptionContainer: {
     flex: 1,

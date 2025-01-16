@@ -56,10 +56,14 @@ const index = () => {
 
       console.log("User signed up:", { uid: user.uid, name, nim });
 
-      if (user) router.replace("/(tabs)");
+      // Tampilkan pesan konfirmasi
+      alert("Sign Up successful! Please login to continue.");
+
+      // Arahkan pengguna kembali ke halaman Login
+      router.replace("/");
     } catch (error: any) {
-      console.log(error);
-      alert("sign In failed: " + error.message);
+      console.error("Sign Up failed:", error.message);
+      alert("Sign Up failed: " + error.message);
     }
   };
 

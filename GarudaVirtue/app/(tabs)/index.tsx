@@ -276,8 +276,10 @@ export default function MergedScreen() {
 
   const handleSignOut = async () => {
     try {
-      await auth.signOut();
-      router.replace("/");
+      console.log("Attempting to sign out...");
+      await auth.signOut(); // Logout pengguna
+      console.log("Sign out successful, navigating to login...");
+      router.replace("/"); // Arahkan ke halaman Sign-In/Sign-Up
     } catch (error) {
       if (error instanceof Error) {
         console.error("Error signing out:", error.message);
@@ -312,10 +314,18 @@ export default function MergedScreen() {
     fetchUserData();
   }, []);
 
-  // Redirect ke halaman login jika pengguna tidak ada
-  getAuth().onAuthStateChanged((user) => {
-    if (!user) router.replace("/");
-  });
+  useEffect(() => {
+    const unsubscribe = getAuth().onAuthStateChanged((user) => {
+      if (!user) {
+        console.log("User is not authenticated, redirecting to login...");
+        router.replace("/"); // Arahkan ke halaman Login
+        console.log("Navigation to login completed.");
+      }
+    });
+
+    // Cleanup listener ketika komponen dibongkar
+    return () => unsubscribe();
+  }, []);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
