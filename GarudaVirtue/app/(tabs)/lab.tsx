@@ -1,162 +1,345 @@
-// import React from "react";
-// import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from "react-native";
-// import { useRouter } from "expo-router";
+// // import React from "react";
+// // import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from "react-native";
+// // import { useRouter } from "expo-router";
 
-// const PlaylistCard: React.FC<{ title: string; imageUrl: string; labId: number }> = ({
-//   title,
-//   imageUrl,
-//   labId,
-// }) => {
-//   const router = useRouter();
+// // const PlaylistCard: React.FC<{ title: string; imageUrl: string; labId: number }> = ({
+// //   title,
+// //   imageUrl,
+// //   labId,
+// // }) => {
+// //   const router = useRouter();
 
-//   return (
-//     <TouchableOpacity
-//       style={styles.playlistCard}
-//       onPress={() => router.push(`/lab/${labId}`)} // Navigasi ke halaman detail
-//     >
-//       <Image source={{ uri: imageUrl }} style={styles.playlistImage} />
-//       <Text style={styles.playlistTitle}>{title}</Text>
-//     </TouchableOpacity>
-//   );
-// };
+// //   return (
+// //     <TouchableOpacity
+// //       style={styles.playlistCard}
+// //       onPress={() => router.push(`/lab/${labId}`)} // Navigasi ke halaman detail
+// //     >
+// //       <Image source={{ uri: imageUrl }} style={styles.playlistImage} />
+// //       <Text style={styles.playlistTitle}>{title}</Text>
+// //     </TouchableOpacity>
+// //   );
+// // };
 
-// const LabScreen: React.FC = () => {
-//   return (
-//     <ScrollView contentContainerStyle={styles.container}>
-//       <View style={styles.header}>
-//         <Text style={styles.logo}>GarudaVirtue</Text>
-//       </View>
+// // const LabScreen: React.FC = () => {
+// //   return (
+// //     <ScrollView contentContainerStyle={styles.container}>
+// //       <View style={styles.header}>
+// //         <Text style={styles.logo}>GarudaVirtue</Text>
+// //       </View>
 
-//       <View style={styles.section}>
-//         <Text style={styles.heading}>Virtual Labs</Text>
-//         <View style={styles.virtualLabContainer}>
-//           <Image
-//             source={{
-//               uri: "https://via.placeholder.com/300x200?text=GarudaVirtue+Labs",
-//             }}
-//             style={styles.virtualLabImage}
-//           />
-//           <View style={styles.virtualLabDetails}>
-//             <Text style={styles.labTitle}>Pengenalan Singkat</Text>
-//             <Text style={styles.labDescription}>
-//               Virtual Labs merupakan salah satu fitur pembelajaran utama di
-//               website GarudaVirtue. Dalam labs ini, kamu akan dipersiapkan dengan berbagai
-//               materi dari modul terkait, sehingga kamu dapat menguji pengetahuan melalui
-//               kuis interaktif yang menarik.
-//             </Text>
-//           </View>
-//         </View>
-//       </View>
+// //       <View style={styles.section}>
+// //         <Text style={styles.heading}>Virtual Labs</Text>
+// //         <View style={styles.virtualLabContainer}>
+// //           <Image
+// //             source={{
+// //               uri: "https://via.placeholder.com/300x200?text=GarudaVirtue+Labs",
+// //             }}
+// //             style={styles.virtualLabImage}
+// //           />
+// //           <View style={styles.virtualLabDetails}>
+// //             <Text style={styles.labTitle}>Pengenalan Singkat</Text>
+// //             <Text style={styles.labDescription}>
+// //               Virtual Labs merupakan salah satu fitur pembelajaran utama di
+// //               website GarudaVirtue. Dalam labs ini, kamu akan dipersiapkan dengan berbagai
+// //               materi dari modul terkait, sehingga kamu dapat menguji pengetahuan melalui
+// //               kuis interaktif yang menarik.
+// //             </Text>
+// //           </View>
+// //         </View>
+// //       </View>
 
-//       <View style={styles.section}>
-//         <Text style={styles.heading}>Playlist Videos</Text>
-//         <View style={styles.gridContainer}>
-//           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-//             <PlaylistCard
-//               key={item}
-//               title={`Lab 0${item}`}
-//               imageUrl={`https://via.placeholder.com/150?text=Lab+0${item}`}
-//               labId={item} // Kirimkan ID lab
-//             />
-//           ))}
-//         </View>
-//       </View>
-//     </ScrollView>
-//   );
-// };
+// //       <View style={styles.section}>
+// //         <Text style={styles.heading}>Playlist Videos</Text>
+// //         <View style={styles.gridContainer}>
+// //           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+// //             <PlaylistCard
+// //               key={item}
+// //               title={`Lab 0${item}`}
+// //               imageUrl={`https://via.placeholder.com/150?text=Lab+0${item}`}
+// //               labId={item} // Kirimkan ID lab
+// //             />
+// //           ))}
+// //         </View>
+// //       </View>
+// //     </ScrollView>
+// //   );
+// // };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flexGrow: 1,
-//     backgroundColor: "#eee",
-//     padding: 16,
-//   },
-//   header: {
-//     padding: 16,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     marginBottom: 16,
-//     borderBottomWidth: 1,
-//     borderBottomColor: "#ddd",
-//   },
-//   logo: {
-//     fontSize: 24,
-//     fontWeight: "bold",
-//     color: "#333",
-//   },
-//   section: {
-//     marginBottom: 24,
-//   },
-//   heading: {
-//     fontSize: 22,
-//     fontWeight: "bold",
-//     marginBottom: 16,
-//     color: "#333",
-//   },
-//   virtualLabContainer: {
-//     flexDirection: "row",
-//     backgroundColor: "#fff",
-//     borderRadius: 8,
-//     padding: 16,
-//     marginBottom: 16,
-//     shadowColor: "#000",
-//     shadowOffset: { width: 0, height: 2 },
-//     shadowOpacity: 0.1,
-//     shadowRadius: 4,
-//     elevation: 2,
-//   },
-//   virtualLabImage: {
-//     width: "40%",
-//     height: 120,
-//     borderRadius: 8,
-//     marginRight: 16,
-//   },
-//   virtualLabDetails: {
-//     flex: 1,
-//   },
-//   labTitle: {
-//     fontSize: 18,
-//     fontWeight: "bold",
-//     marginBottom: 8,
-//     color: "#333",
-//   },
-//   labDescription: {
-//     fontSize: 16,
-//     color: "#555",
-//     lineHeight: 24,
-//   },
-//   gridContainer: {
-//     flexDirection: "row",
-//     flexWrap: "wrap",
-//     justifyContent: "space-between",
-//   },
-//   playlistCard: {
-//     backgroundColor: "#fff",
-//     borderRadius: 8,
-//     padding: 8,
-//     marginBottom: 16,
-//     width: "30%",
-//     alignItems: "center",
-//     shadowColor: "#000",
-//     shadowOffset: { width: 0, height: 2 },
-//     shadowOpacity: 0.1,
-//     shadowRadius: 4,
-//     elevation: 2,
-//   },
-//   playlistImage: {
-//     width: "100%",
-//     height: 100,
-//     borderRadius: 8,
-//     marginBottom: 8,
-//   },
-//   playlistTitle: {
-//     fontSize: 14,
-//     fontWeight: "bold",
-//     color: "#333",
-//   },
-// });
+// // const styles = StyleSheet.create({
+// //   container: {
+// //     flexGrow: 1,
+// //     backgroundColor: "#eee",
+// //     padding: 16,
+// //   },
+// //   header: {
+// //     padding: 16,
+// //     backgroundColor: "#fff",
+// //     alignItems: "center",
+// //     marginBottom: 16,
+// //     borderBottomWidth: 1,
+// //     borderBottomColor: "#ddd",
+// //   },
+// //   logo: {
+// //     fontSize: 24,
+// //     fontWeight: "bold",
+// //     color: "#333",
+// //   },
+// //   section: {
+// //     marginBottom: 24,
+// //   },
+// //   heading: {
+// //     fontSize: 22,
+// //     fontWeight: "bold",
+// //     marginBottom: 16,
+// //     color: "#333",
+// //   },
+// //   virtualLabContainer: {
+// //     flexDirection: "row",
+// //     backgroundColor: "#fff",
+// //     borderRadius: 8,
+// //     padding: 16,
+// //     marginBottom: 16,
+// //     shadowColor: "#000",
+// //     shadowOffset: { width: 0, height: 2 },
+// //     shadowOpacity: 0.1,
+// //     shadowRadius: 4,
+// //     elevation: 2,
+// //   },
+// //   virtualLabImage: {
+// //     width: "40%",
+// //     height: 120,
+// //     borderRadius: 8,
+// //     marginRight: 16,
+// //   },
+// //   virtualLabDetails: {
+// //     flex: 1,
+// //   },
+// //   labTitle: {
+// //     fontSize: 18,
+// //     fontWeight: "bold",
+// //     marginBottom: 8,
+// //     color: "#333",
+// //   },
+// //   labDescription: {
+// //     fontSize: 16,
+// //     color: "#555",
+// //     lineHeight: 24,
+// //   },
+// //   gridContainer: {
+// //     flexDirection: "row",
+// //     flexWrap: "wrap",
+// //     justifyContent: "space-between",
+// //   },
+// //   playlistCard: {
+// //     backgroundColor: "#fff",
+// //     borderRadius: 8,
+// //     padding: 8,
+// //     marginBottom: 16,
+// //     width: "30%",
+// //     alignItems: "center",
+// //     shadowColor: "#000",
+// //     shadowOffset: { width: 0, height: 2 },
+// //     shadowOpacity: 0.1,
+// //     shadowRadius: 4,
+// //     elevation: 2,
+// //   },
+// //   playlistImage: {
+// //     width: "100%",
+// //     height: 100,
+// //     borderRadius: 8,
+// //     marginBottom: 8,
+// //   },
+// //   playlistTitle: {
+// //     fontSize: 14,
+// //     fontWeight: "bold",
+// //     color: "#333",
+// //   },
+// // });
 
-// export default LabScreen;
+// // export default LabScreen;
+
+// // import React from "react";
+// // import {
+// //   View,
+// //   Text,
+// //   StyleSheet,
+// //   Image,
+// //   ScrollView,
+// //   TouchableOpacity,
+// // } from "react-native";
+// // import { useRouter } from "expo-router";
+
+// // // Gambar lokal untuk kartu lab
+// // const images = [
+// //   require("@/assets/images/12.jpg"),
+// //   require("@/assets/images/13.jpg"),
+// //   require("@/assets/images/14.jpg"),
+// //   require("@/assets/images/15.jpg"),
+// //   require("@/assets/images/16.jpg"),
+// //   require("@/assets/images/17.jpg"),
+// //   require("@/assets/images/18.jpg"),
+// //   require("@/assets/images/19.jpg"),
+// //   require("@/assets/images/20.jpg"),
+// // ];
+
+// // const PlaylistCard: React.FC<{ title: string; image: any; labId: number }> = ({
+// //   title,
+// //   image,
+// //   labId,
+// // }) => {
+// //   const router = useRouter();
+
+// //   return (
+// //     <TouchableOpacity
+// //       style={styles.playlistCard}
+// //       onPress={() =>
+// //         router.push({
+// //           pathname: "/lab/[labId]",
+// //           params: { labId: labId.toString() },
+// //         })
+// //       }
+// //     >
+// //       <Image source={image} style={styles.playlistImage} />
+// //       <Text style={styles.playlistTitle}>{title}</Text>
+// //     </TouchableOpacity>
+// //   );
+// // };
+
+// // const LabScreen: React.FC = () => {
+// //   return (
+// //     <ScrollView contentContainerStyle={styles.container}>
+// //       <View style={styles.header}>
+// //         <Text style={styles.logo}>GarudaVirtue</Text>
+// //       </View>
+
+// //       <View style={styles.section}>
+// //         <Text style={styles.heading}>Virtual Labs</Text>
+// //         <View style={styles.virtualLabContainer}>
+// //           <Image
+// //             source={require("@/assets/images/gambar lab main.jpg")}
+// //             style={styles.virtualLabImage}
+// //           />
+// //           <View style={styles.virtualLabDetails}>
+// //             <Text style={styles.labTitle}>Pengenalan Singkat</Text>
+// //             <Text style={styles.labDescription}>
+// //               Virtual Labs merupakan salah satu fitur pembelajaran utama di
+// //               website GarudaVirtue. Dalam labs ini, kamu akan dipersiapkan
+// //               dengan berbagai materi dari modul terkait, sehingga kamu dapat
+// //               menguji pengetahuan melalui kuis interaktif yang menarik.
+// //             </Text>
+// //           </View>
+// //         </View>
+// //       </View>
+
+// //       <View style={styles.section}>
+// //         <Text style={styles.heading}>Playlist Videos</Text>
+// //         <View style={styles.gridContainer}>
+// //           {images.map((image, index) => (
+// //             <PlaylistCard
+// //               key={index}
+// //               title={`Lab ${index + 1}`}
+// //               image={image}
+// //               labId={index + 1}
+// //             />
+// //           ))}
+// //         </View>
+// //       </View>
+// //     </ScrollView>
+// //   );
+// // };
+
+// // const styles = StyleSheet.create({
+// //   container: {
+// //     flexGrow: 1,
+// //     backgroundColor: "#f8f8f8",
+// //     padding: 16,
+// //   },
+// //   header: {
+// //     padding: 16,
+// //     backgroundColor: "#fff",
+// //     alignItems: "center",
+// //     marginBottom: 16,
+// //     borderBottomWidth: 1,
+// //     borderBottomColor: "#ddd",
+// //   },
+// //   logo: {
+// //     fontSize: 24,
+// //     fontWeight: "bold",
+// //     color: "#333",
+// //   },
+// //   section: {
+// //     marginBottom: 24,
+// //   },
+// //   heading: {
+// //     fontSize: 22,
+// //     fontWeight: "bold",
+// //     marginBottom: 16,
+// //     color: "#333",
+// //   },
+// //   virtualLabContainer: {
+// //     flexDirection: "row",
+// //     backgroundColor: "#fff",
+// //     borderRadius: 8,
+// //     padding: 16,
+// //     marginBottom: 16,
+// //     shadowColor: "#000",
+// //     shadowOffset: { width: 0, height: 2 },
+// //     shadowOpacity: 0.1,
+// //     shadowRadius: 4,
+// //     elevation: 2,
+// //   },
+// //   virtualLabImage: {
+// //     width: "40%",
+// //     height: 120,
+// //     borderRadius: 8,
+// //     marginRight: 16,
+// //   },
+// //   virtualLabDetails: {
+// //     flex: 1,
+// //   },
+// //   labTitle: {
+// //     fontSize: 18,
+// //     fontWeight: "bold",
+// //     marginBottom: 8,
+// //     color: "#333",
+// //   },
+// //   labDescription: {
+// //     fontSize: 16,
+// //     color: "#555",
+// //     lineHeight: 24,
+// //   },
+// //   gridContainer: {
+// //     flexDirection: "row",
+// //     flexWrap: "wrap",
+// //     justifyContent: "space-between",
+// //   },
+// //   playlistCard: {
+// //     backgroundColor: "#fff",
+// //     borderRadius: 8,
+// //     padding: 8,
+// //     marginBottom: 16,
+// //     width: "30%",
+// //     alignItems: "center",
+// //     shadowColor: "#000",
+// //     shadowOffset: { width: 0, height: 2 },
+// //     shadowOpacity: 0.1,
+// //     shadowRadius: 4,
+// //     elevation: 2,
+// //   },
+// //   playlistImage: {
+// //     width: "100%",
+// //     height: 100,
+// //     borderRadius: 8,
+// //     marginBottom: 8,
+// //   },
+// //   playlistTitle: {
+// //     fontSize: 14,
+// //     fontWeight: "bold",
+// //     color: "#333",
+// //   },
+// // });
+
+// // export default LabScreen;
 
 // import React from "react";
 // import {
@@ -169,43 +352,9 @@
 // } from "react-native";
 // import { useRouter } from "expo-router";
 
-// // Gambar lokal untuk kartu lab
-// const images = [
-//   require("@/assets/images/12.jpg"),
-//   require("@/assets/images/13.jpg"),
-//   require("@/assets/images/14.jpg"),
-//   require("@/assets/images/15.jpg"),
-//   require("@/assets/images/16.jpg"),
-//   require("@/assets/images/17.jpg"),
-//   require("@/assets/images/18.jpg"),
-//   require("@/assets/images/19.jpg"),
-//   require("@/assets/images/20.jpg"),
-// ];
-
-// const PlaylistCard: React.FC<{ title: string; image: any; labId: number }> = ({
-//   title,
-//   image,
-//   labId,
-// }) => {
+// const LabScreen: React.FC = () => {
 //   const router = useRouter();
 
-//   return (
-//     <TouchableOpacity
-//       style={styles.playlistCard}
-//       onPress={() =>
-//         router.push({
-//           pathname: "/lab/[labId]",
-//           params: { labId: labId.toString() },
-//         })
-//       }
-//     >
-//       <Image source={image} style={styles.playlistImage} />
-//       <Text style={styles.playlistTitle}>{title}</Text>
-//     </TouchableOpacity>
-//   );
-// };
-
-// const LabScreen: React.FC = () => {
 //   return (
 //     <ScrollView contentContainerStyle={styles.container}>
 //       <View style={styles.header}>
@@ -216,33 +365,33 @@
 //         <Text style={styles.heading}>Virtual Labs</Text>
 //         <View style={styles.virtualLabContainer}>
 //           <Image
-//             source={require("@/assets/images/gambar lab main.jpg")}
+//             source={require("@/assets/images/gambarLab.jpg")}
 //             style={styles.virtualLabImage}
 //           />
 //           <View style={styles.virtualLabDetails}>
 //             <Text style={styles.labTitle}>Pengenalan Singkat</Text>
 //             <Text style={styles.labDescription}>
-//               Virtual Labs merupakan salah satu fitur pembelajaran utama di
-//               website GarudaVirtue. Dalam labs ini, kamu akan dipersiapkan
-//               dengan berbagai materi dari modul terkait, sehingga kamu dapat
-//               menguji pengetahuan melalui kuis interaktif yang menarik.
+//               Virtual Labs adalah salah satu fitur pembelajaran utama di
+//               GarudaVirtue. Dalam labs ini, Anda akan mempelajari berbagai
+//               materi dari modul terkait, serta menguji pemahaman Anda melalui
+//               kuis interaktif.
 //             </Text>
 //           </View>
 //         </View>
 //       </View>
 
 //       <View style={styles.section}>
-//         <Text style={styles.heading}>Playlist Videos</Text>
-//         <View style={styles.gridContainer}>
-//           {images.map((image, index) => (
-//             <PlaylistCard
-//               key={index}
-//               title={`Lab ${index + 1}`}
-//               image={image}
-//               labId={index + 1}
-//             />
-//           ))}
-//         </View>
+//         <Text style={styles.heading}>Playlist Video</Text>
+//         <TouchableOpacity
+//           style={styles.playlistCard}
+//           onPress={() => router.push("/lab")}
+//         >
+//           <Image
+//             source={require("@/assets/images/gambarLab.jpg")}
+//             style={styles.playlistImage}
+//           />
+//           <Text style={styles.playlistTitle}>Playlist Lab</Text>
+//         </TouchableOpacity>
 //       </View>
 //     </ScrollView>
 //   );
@@ -308,17 +457,10 @@
 //     color: "#555",
 //     lineHeight: 24,
 //   },
-//   gridContainer: {
-//     flexDirection: "row",
-//     flexWrap: "wrap",
-//     justifyContent: "space-between",
-//   },
 //   playlistCard: {
 //     backgroundColor: "#fff",
 //     borderRadius: 8,
 //     padding: 8,
-//     marginBottom: 16,
-//     width: "30%",
 //     alignItems: "center",
 //     shadowColor: "#000",
 //     shadowOffset: { width: 0, height: 2 },
@@ -328,14 +470,229 @@
 //   },
 //   playlistImage: {
 //     width: "100%",
-//     height: 100,
+//     height: 120,
 //     borderRadius: 8,
 //     marginBottom: 8,
 //   },
 //   playlistTitle: {
-//     fontSize: 14,
+//     fontSize: 16,
 //     fontWeight: "bold",
 //     color: "#333",
+//   },
+// });
+
+// export default LabScreen;
+
+// import React from "react";
+// import {
+//   View,
+//   Text,
+//   StyleSheet,
+//   Image,
+//   ScrollView,
+//   TouchableOpacity,
+// } from "react-native";
+// import { useRouter } from "expo-router";
+
+// const LabScreen: React.FC = () => {
+//   const router = useRouter();
+
+//   return (
+//     <ScrollView contentContainerStyle={styles.container}>
+//       {/* Header */}
+//       <View style={styles.header}>
+//         <Text style={styles.logo}>GarudaVirtue</Text>
+//       </View>
+
+//       {/* Intro Section */}
+//       <View style={styles.section}>
+//         <Text style={styles.heading}>Virtual Labs</Text>
+//         <View style={styles.virtualLabContainer}>
+//           <Image
+//             source={require("@/assets/images/gambarLab.jpg")}
+//             style={styles.virtualLabImage}
+//           />
+//           <View style={styles.virtualLabDetails}>
+//             <Text style={styles.labTitle}>Pengenalan Singkat</Text>
+//             <Text style={styles.labDescription}>
+//               Virtual Labs adalah salah satu fitur pembelajaran utama di
+//               GarudaVirtue. Dalam labs ini, Anda akan mempelajari berbagai
+//               materi dari modul terkait, serta menguji pemahaman Anda melalui
+//               kuis interaktif.
+//             </Text>
+//           </View>
+//         </View>
+//       </View>
+
+//       {/* Lab Grid */}
+//       <View style={styles.section}>
+//         <Text style={styles.heading}>Daftar Labs</Text>
+//         <View style={styles.gridContainer}>
+//           {/* Lab 1 */}
+//           <TouchableOpacity
+//             style={styles.labCard}
+//             onPress={() => router.push("/lab/lab1")}
+//           >
+//             <Image
+//               source={require("@/assets/images/12.jpg")}
+//               style={styles.labImage}
+//             />
+//             <Text style={styles.labCardTitle}>Lab 1</Text>
+//           </TouchableOpacity>
+
+//           {/* Lab 2 */}
+//           <TouchableOpacity
+//             style={styles.labCard}
+//             onPress={() => router.push("/lab/lab2")}
+//           >
+//             <Image
+//               source={require("@/assets/images/13.jpg")}
+//               style={styles.labImage}
+//             />
+//             <Text style={styles.labCardTitle}>Lab 2</Text>
+//           </TouchableOpacity>
+
+//           {/* Lab 3 */}
+//           <TouchableOpacity
+//             style={styles.labCard}
+//             onPress={() => router.push("/lab/lab3")}
+//           >
+//             <Image
+//               source={require("@/assets/images/14.jpg")}
+//               style={styles.labImage}
+//             />
+//             <Text style={styles.labCardTitle}>Lab 3</Text>
+//           </TouchableOpacity>
+
+//           {/* Lab 4 */}
+//           <TouchableOpacity
+//             style={styles.labCard}
+//             onPress={() => router.push("/lab/lab4")}
+//           >
+//             <Image
+//               source={require("@/assets/images/15.jpg")}
+//               style={styles.labImage}
+//             />
+//             <Text style={styles.labCardTitle}>Lab 4</Text>
+//           </TouchableOpacity>
+
+//           {/* Lab 5 */}
+//           <TouchableOpacity
+//             style={styles.labCard}
+//             onPress={() => router.push("/lab/lab5")}
+//           >
+//             <Image
+//               source={require("@/assets/images/16.jpg")}
+//               style={styles.labImage}
+//             />
+//             <Text style={styles.labCardTitle}>Lab 5</Text>
+//           </TouchableOpacity>
+
+//           {/* Lab 6 */}
+//           <TouchableOpacity
+//             style={styles.labCard}
+//             onPress={() => router.push("/lab/lab6")}
+//           >
+//             <Image
+//               source={require("@/assets/images/17.jpg")}
+//               style={styles.labImage}
+//             />
+//             <Text style={styles.labCardTitle}>Lab 6</Text>
+//           </TouchableOpacity>
+//         </View>
+//       </View>
+//     </ScrollView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flexGrow: 1,
+//     backgroundColor: "#f8f8f8",
+//     padding: 16,
+//   },
+//   header: {
+//     padding: 16,
+//     backgroundColor: "#560216",
+//     alignItems: "center",
+//     marginBottom: 16,
+//     borderRadius: 8,
+//   },
+//   logo: {
+//     fontSize: 24,
+//     fontWeight: "bold",
+//     color: "#f9eedf",
+//   },
+//   section: {
+//     marginBottom: 24,
+//   },
+//   heading: {
+//     fontSize: 22,
+//     fontWeight: "bold",
+//     marginBottom: 16,
+//     color: "#333",
+//   },
+//   virtualLabContainer: {
+//     flexDirection: "row",
+//     backgroundColor: "#fff",
+//     borderRadius: 8,
+//     padding: 16,
+//     marginBottom: 16,
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 4,
+//     elevation: 2,
+//   },
+//   virtualLabImage: {
+//     width: "40%",
+//     height: 120,
+//     borderRadius: 8,
+//     marginRight: 16,
+//   },
+//   virtualLabDetails: {
+//     flex: 1,
+//   },
+//   labTitle: {
+//     fontSize: 18,
+//     fontWeight: "bold",
+//     marginBottom: 8,
+//     color: "#333",
+//   },
+//   labDescription: {
+//     fontSize: 16,
+//     color: "#555",
+//     lineHeight: 24,
+//   },
+//   gridContainer: {
+//     flexDirection: "row",
+//     flexWrap: "wrap",
+//     justifyContent: "space-between",
+//   },
+//   labCard: {
+//     backgroundColor: "#fff",
+//     borderRadius: 8,
+//     padding: 8,
+//     marginBottom: 16,
+//     width: "48%",
+//     alignItems: "center",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 4,
+//     elevation: 2,
+//   },
+//   labImage: {
+//     width: "100%",
+//     height: 100,
+//     borderRadius: 8,
+//     marginBottom: 8,
+//   },
+//   labCardTitle: {
+//     fontSize: 16,
+//     fontWeight: "bold",
+//     color: "#333",
+//     textAlign: "center",
 //   },
 // });
 
@@ -357,10 +714,12 @@ const LabScreen: React.FC = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.logo}>GarudaVirtue</Text>
       </View>
 
+      {/* Intro Section */}
       <View style={styles.section}>
         <Text style={styles.heading}>Virtual Labs</Text>
         <View style={styles.virtualLabContainer}>
@@ -380,18 +739,82 @@ const LabScreen: React.FC = () => {
         </View>
       </View>
 
+      {/* Lab Grid */}
       <View style={styles.section}>
-        <Text style={styles.heading}>Playlist Video</Text>
-        <TouchableOpacity
-          style={styles.playlistCard}
-          onPress={() => router.push("/lab")}
-        >
-          <Image
-            source={require("@/assets/images/gambarLab.jpg")}
-            style={styles.playlistImage}
-          />
-          <Text style={styles.playlistTitle}>Playlist Lab</Text>
-        </TouchableOpacity>
+        <Text style={styles.heading}>Daftar Labs</Text>
+        <View style={styles.gridContainer}>
+          {/* Lab 1 */}
+          <TouchableOpacity
+            style={styles.labCard}
+            onPress={() => router.push("/lab/lab1")}
+          >
+            <Image
+              source={require("@/assets/images/12.jpg")}
+              style={styles.labImage}
+            />
+            <Text style={styles.labCardTitle}>Lab 1</Text>
+          </TouchableOpacity>
+
+          {/* Lab 2 */}
+          <TouchableOpacity
+            style={styles.labCard}
+            onPress={() => router.push("/lab/lab2")}
+          >
+            <Image
+              source={require("@/assets/images/13.jpg")}
+              style={styles.labImage}
+            />
+            <Text style={styles.labCardTitle}>Lab 2</Text>
+          </TouchableOpacity>
+
+          {/* Lab 3 */}
+          <TouchableOpacity
+            style={styles.labCard}
+            onPress={() => router.push("/lab/lab3")}
+          >
+            <Image
+              source={require("@/assets/images/14.jpg")}
+              style={styles.labImage}
+            />
+            <Text style={styles.labCardTitle}>Lab 3</Text>
+          </TouchableOpacity>
+
+          {/* Lab 4 */}
+          <TouchableOpacity
+            style={styles.labCard}
+            onPress={() => router.push("/lab/lab4")}
+          >
+            <Image
+              source={require("@/assets/images/15.jpg")}
+              style={styles.labImage}
+            />
+            <Text style={styles.labCardTitle}>Lab 4</Text>
+          </TouchableOpacity>
+
+          {/* Lab 5 */}
+          <TouchableOpacity
+            style={styles.labCard}
+            onPress={() => router.push("/lab/lab5")}
+          >
+            <Image
+              source={require("@/assets/images/16.jpg")}
+              style={styles.labImage}
+            />
+            <Text style={styles.labCardTitle}>Lab 5</Text>
+          </TouchableOpacity>
+
+          {/* Lab 6 */}
+          <TouchableOpacity
+            style={styles.labCard}
+            onPress={() => router.push("/lab/lab6")}
+          >
+            <Image
+              source={require("@/assets/images/17.jpg")}
+              style={styles.labImage}
+            />
+            <Text style={styles.labCardTitle}>Lab 6</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -400,21 +823,20 @@ const LabScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#f8f8f8",
+    backgroundColor: "#fff", // Warna putih untuk latar belakang utama
     padding: 16,
   },
   header: {
     padding: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#560216", // Warna utama dari logo
     alignItems: "center",
     marginBottom: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
+    borderRadius: 8,
   },
   logo: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#333",
+    color: "#f9eedf", // Warna aksen untuk teks
   },
   section: {
     marginBottom: 24,
@@ -423,11 +845,11 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 16,
-    color: "#333",
+    color: "#560216", // Warna utama untuk heading
   },
   virtualLabContainer: {
     flexDirection: "row",
-    backgroundColor: "#fff",
+    backgroundColor: "#560216", // Warna utama sebagai latar belakang card
     borderRadius: 8,
     padding: 16,
     marginBottom: 16,
@@ -450,17 +872,24 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 8,
-    color: "#333",
+    color: "#f9eedf", // Warna terang untuk teks
   },
   labDescription: {
     fontSize: 16,
-    color: "#555",
+    color: "#f9eedf", // Warna terang untuk teks
     lineHeight: 24,
   },
-  playlistCard: {
-    backgroundColor: "#fff",
+  gridContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  labCard: {
+    backgroundColor: "#560216", // Warna utama sebagai latar belakang card
     borderRadius: 8,
     padding: 8,
+    marginBottom: 16,
+    width: "48%",
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -468,16 +897,17 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
-  playlistImage: {
+  labImage: {
     width: "100%",
-    height: 120,
+    height: 100,
     borderRadius: 8,
     marginBottom: 8,
   },
-  playlistTitle: {
+  labCardTitle: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#333",
+    color: "#f9eedf", // Warna terang untuk teks
+    textAlign: "center",
   },
 });
 

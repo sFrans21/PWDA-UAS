@@ -221,54 +221,76 @@ import {
 
 const quizData = [
   {
-    question: "Siapa yang memprakarsai Pancasila?",
-    options: ["Sukarno", "Mohammad Hatta", "Soepomo", "Ki Hadjar Dewantara"],
-    correct: "Sukarno",
-  },
-  {
-    question: "Apa sila kedua dari Pancasila?",
+    question:
+      "Apa makna dari identitas nasional menurut konsep yang disampaikan dalam materi?",
     options: [
-      "Ketuhanan Yang Maha Esa",
-      "Kemanusiaan yang Adil dan Beradab",
-      "Persatuan Indonesia",
-      "Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan",
+      "Identitas kelompok yang melekat pada setiap individu",
+      "Identitas yang dibentuk berdasarkan wilayah geografis",
+      "Ciri khas yang mengikat masyarakat sebagai satu bangsa",
+      "Tanda untuk membedakan antara kelompok lokal dan internasional",
     ],
-    correct: "Kemanusiaan yang Adil dan Beradab",
+    correct: "Ciri khas yang mengikat masyarakat sebagai satu bangsa",
   },
   {
-    question: "Apa lambang sila keempat Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Kepala banteng", "Rantai"],
-    correct: "Kepala banteng",
-  },
-  {
-    question: "Apa arti dari Bhineka Tunggal Ika?",
+    question:
+      "Faktor manakah yang dianggap penting dalam pembentukan identitas nasional Indonesia?",
     options: [
-      "Bersatu dalam Keberagaman",
-      "Berbeda untuk Menyeragamkan",
-      "Kesatuan yang Menyamakan",
-      "Keanekaragaman yang Dihapuskan",
+      "Kehendak bersama untuk bersatu",
+      "Keunggulan ekonomi suatu wilayah",
+      "Pengaruh budaya luar yang kuat",
+      "Teknologi informasi yang berkembang pesat",
     ],
-    correct: "Bersatu dalam Keberagaman",
+    correct: "Kehendak bersama untuk bersatu",
   },
   {
-    question: "Apa simbol sila ketiga Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Padi dan kapas", "Kepala banteng"],
-    correct: "Pohon beringin",
+    question:
+      "Siapakah tokoh yang mendefinisikan bangsa sebagai persatuan karakter karena persatuan nasib?",
+    options: ["Ernest Renan", "Otto Bauer", "Mochtar Lubis", "Bung Karno"],
+    correct: "Otto Bauer",
   },
   {
-    question: "Apa tujuan Pancasila sebagai ideologi negara?",
+    question:
+      "Mengapa 'Pancasila' disebut sebagai bagian dari identitas nasional Indonesia?",
     options: [
-      "Menghapus keberagaman",
-      "Membentuk masyarakat adil dan makmur",
-      "Menjunjung kebebasan mutlak",
-      "Mengutamakan kepentingan individu",
+      "Karena disepakati oleh pemimpin bangsa",
+      "Sebagai dasar negara dan falsafah hidup bangsa",
+      "Sebagai pedoman teknis dalam pemerintahan",
+      "Karena menjadi alat politik yang kuat",
     ],
-    correct: "Membentuk masyarakat adil dan makmur",
+    correct: "Sebagai dasar negara dan falsafah hidup bangsa",
   },
   {
-    question: "Apa warna dasar lambang negara Indonesia?",
-    options: ["Merah", "Hitam", "Putih", "Kuning"],
-    correct: "Kuning",
+    question:
+      "Menurut konsep ‘Manusia Indonesia Berkualitas,’ apa yang dimaksud dengan ‘pekerja pemikir’?",
+    options: [
+      "Individu yang memiliki keahlian teknis tinggi",
+      "Orang yang mampu berpikir kritis dan kreatif",
+      "Pekerja yang ahli di bidang fisik",
+      "Orang yang bekerja tanpa bantuan teknologi",
+    ],
+    correct: "Orang yang mampu berpikir kritis dan kreatif",
+  },
+  {
+    question:
+      "Apakah tujuan dari perubahan mindset dalam masyarakat Indonesia, seperti 'bergantung' menjadi 'mandiri'?",
+    options: [
+      "Mengurangi ketergantungan pada sumber daya alam",
+      "Mendorong masyarakat untuk berwirausaha",
+      "Meningkatkan kualitas pendidikan nasional",
+      "Menciptakan individu yang berdaya dan mandiri",
+    ],
+    correct: "Menciptakan individu yang berdaya dan mandiri",
+  },
+  {
+    question:
+      "Apa urgensi dari integrasi nasional dalam konteks Indonesia saat ini?",
+    options: [
+      "Memperkuat posisi politik di kawasan Asia",
+      "Menjaga eksistensi dan kedaulatan negara",
+      "Menarik lebih banyak investor asing",
+      "Menyebarkan budaya nasional ke dunia internasional",
+    ],
+    correct: "Menjaga eksistensi dan kedaulatan negara",
   },
 ];
 

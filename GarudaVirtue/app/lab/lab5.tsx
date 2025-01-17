@@ -221,57 +221,83 @@ import {
 
 const quizData = [
   {
-    question: "Siapa yang memprakarsai Pancasila?",
-    options: ["Sukarno", "Mohammad Hatta", "Soepomo", "Ki Hadjar Dewantara"],
-    correct: "Sukarno",
-  },
-  {
-    question: "Apa sila kedua dari Pancasila?",
+    question:
+      "Apa yang menjadi prinsip dasar negara hukum menurut UUD 1945 dalam melindungi hak warga negara?",
     options: [
-      "Ketuhanan Yang Maha Esa",
-      "Kemanusiaan yang Adil dan Beradab",
-      "Persatuan Indonesia",
-      "Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan",
+      "Pembatasan kebebasan berbicara",
+      "Keberadaan organ eksekutif yang independen",
+      "Pemusatan kekuasaan pada presiden",
+      "Mengutamakan keamanan ketimbang keadilan",
     ],
-    correct: "Kemanusiaan yang Adil dan Beradab",
+    correct: "Keberadaan organ eksekutif yang independen",
   },
   {
-    question: "Apa lambang sila keempat Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Kepala banteng", "Rantai"],
-    correct: "Kepala banteng",
-  },
-  {
-    question: "Apa arti dari Bhineka Tunggal Ika?",
+    question:
+      "Dalam konsep negara hukum modern, apa peran utama negara terhadap warganya?",
     options: [
-      "Bersatu dalam Keberagaman",
-      "Berbeda untuk Menyeragamkan",
-      "Kesatuan yang Menyamakan",
-      "Keanekaragaman yang Dihapuskan",
+      "Hanya menjaga ketertiban umum tanpa ikut campur dalam kesejahteraan",
+      "Memberikan perlindungan hak asasi melalui pemenuhan kesejahteraan umum",
+      "Menegakkan keamanan melalui otoritas absolut",
+      "Menjaga stabilitas ekonomi nasional melalui intervensi penuh",
     ],
-    correct: "Bersatu dalam Keberagaman",
+    correct:
+      "Memberikan perlindungan hak asasi melalui pemenuhan kesejahteraan umum",
   },
   {
-    question: "Apa simbol sila ketiga Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Padi dan kapas", "Kepala banteng"],
-    correct: "Pohon beringin",
-  },
-  {
-    question: "Apa tujuan Pancasila sebagai ideologi negara?",
+    question:
+      "Apa yang dimaksud dengan 'Supermasi Hukum' dalam konteks negara hukum?",
     options: [
-      "Menghapus keberagaman",
-      "Membentuk masyarakat adil dan makmur",
-      "Menjunjung kebebasan mutlak",
-      "Mengutamakan kepentingan individu",
+      "Pengutamaan kekuasaan eksekutif di atas hukum",
+      "Pengutamaan kepentingan individu atas hukum",
+      "Hukum memiliki kedudukan tertinggi yang mengikat semua pihak",
+      "Pembentukan hukum berdasarkan konsensus mayoritas",
     ],
-    correct: "Membentuk masyarakat adil dan makmur",
+    correct: "Hukum memiliki kedudukan tertinggi yang mengikat semua pihak",
   },
   {
-    question: "Apa warna dasar lambang negara Indonesia?",
-    options: ["Merah", "Hitam", "Putih", "Kuning"],
-    correct: "Kuning",
+    question:
+      "Menurut teori Stuffenbau, apakah norma dasar dari sistem hukum di Indonesia?",
+    options: [
+      "Undang-undang",
+      "Peraturan pemerintah",
+      "Pancasila",
+      "Peraturan daerah",
+    ],
+    correct: "Pancasila",
+  },
+  {
+    question: "Apakah yang menjadi ciri khas dari negara hukum klasik?",
+    options: [
+      "Memberikan jaminan terhadap kesejahteraan rakyat",
+      "Melibatkan diri dalam berbagai bidang kehidupan sosial",
+      "Hanya menjaga ketertiban dan melindungi hak asasi secara pasif",
+      "Mengutamakan prinsip kesetaraan dalam hukum",
+    ],
+    correct: "Hanya menjaga ketertiban dan melindungi hak asasi secara pasif",
+  },
+  {
+    question:
+      "Apa yang menjadi pembatas kekuasaan penguasa dalam negara hukum menurut pandangan Rechstaat?",
+    options: [
+      "Perintah langsung dari presiden",
+      "Adanya peraturan undang-undang yang mengikat",
+      "Kebebasan tanpa batas untuk penguasa",
+      "Kekuasaan militer yang terpisah",
+    ],
+    correct: "Adanya peraturan undang-undang yang mengikat",
+  },
+  {
+    question:
+      "Dalam sistem hukum Indonesia, apa fungsi dari 'prinsip demokrasi' yang diterapkan?",
+    options: [
+      "Menjamin bahwa presiden memiliki hak veto absolut",
+      "Memberikan wewenang penuh kepada mayoritas",
+      "Memastikan bahwa kedaulatan berada di tangan rakyat",
+      "Mengutamakan hukum adat sebagai pedoman utama",
+    ],
+    correct: "Memastikan bahwa kedaulatan berada di tangan rakyat",
   },
 ];
-
 const Lab1 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);

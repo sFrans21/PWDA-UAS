@@ -218,57 +218,77 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
-
 const quizData = [
   {
-    question: "Siapa yang memprakarsai Pancasila?",
-    options: ["Sukarno", "Mohammad Hatta", "Soepomo", "Ki Hadjar Dewantara"],
-    correct: "Sukarno",
-  },
-  {
-    question: "Apa sila kedua dari Pancasila?",
+    question: "Apa tujuan dari filsafat menurut pandangan Descartes?",
     options: [
-      "Ketuhanan Yang Maha Esa",
-      "Kemanusiaan yang Adil dan Beradab",
-      "Persatuan Indonesia",
-      "Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan",
+      "Untuk mengkritik ilmu pengetahuan",
+      "Untuk menemukan kebenaran absolut",
+      "Untuk memahami keberadaan manusia",
+      "Untuk menjadi dasar negara",
     ],
-    correct: "Kemanusiaan yang Adil dan Beradab",
+    correct: "Untuk memahami keberadaan manusia",
   },
   {
-    question: "Apa lambang sila keempat Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Kepala banteng", "Rantai"],
-    correct: "Kepala banteng",
-  },
-  {
-    question: "Apa arti dari Bhineka Tunggal Ika?",
+    question: "Apa arti dari nilai praksis dalam ideologi Pancasila?",
     options: [
-      "Bersatu dalam Keberagaman",
-      "Berbeda untuk Menyeragamkan",
-      "Kesatuan yang Menyamakan",
-      "Keanekaragaman yang Dihapuskan",
+      "Nilai-nilai dasar yang tidak berubah",
+      "Pelaksanaan nilai-nilai instrumental dalam kehidupan nyata",
+      "Nilai-nilai yang hanya berfungsi sementara",
+      "Nilai yang berlaku di masa lalu",
     ],
-    correct: "Bersatu dalam Keberagaman",
+    correct: "Pelaksanaan nilai-nilai instrumental dalam kehidupan nyata",
   },
   {
-    question: "Apa simbol sila ketiga Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Padi dan kapas", "Kepala banteng"],
-    correct: "Pohon beringin",
-  },
-  {
-    question: "Apa tujuan Pancasila sebagai ideologi negara?",
+    question: "Menurut pandangan ideologi integralistik, negara adalah…",
     options: [
-      "Menghapus keberagaman",
-      "Membentuk masyarakat adil dan makmur",
-      "Menjunjung kebebasan mutlak",
-      "Mengutamakan kepentingan individu",
+      "Kesatuan yang terdiri dari golongan yang terpisah",
+      "Kumpulan individu tanpa keterkaitan",
+      "Suatu susunan masyarakat yang integral dan organis",
+      "Kumpulan aturan yang bersifat individualistik",
     ],
-    correct: "Membentuk masyarakat adil dan makmur",
+    correct: "Suatu susunan masyarakat yang integral dan organis",
   },
   {
-    question: "Apa warna dasar lambang negara Indonesia?",
-    options: ["Merah", "Hitam", "Putih", "Kuning"],
-    correct: "Kuning",
+    question: "Apa yang dimaksud dengan ideologi terbuka?",
+    options: [
+      "Ideologi yang dapat digantikan",
+      "Ideologi yang tetap, tetapi fleksibel dalam penerapannya",
+      "Ideologi yang bebas berubah sesuai kebutuhan",
+      "Ideologi yang diambil dari negara lain",
+    ],
+    correct: "Kelangkaan komoditas tertentu",
+  },
+  {
+    question:
+      "Apa yang menjadi salah satu batasan bagi Pancasila sebagai ideologi terbuka?",
+    options: [
+      "Mengikuti semua perubahan global",
+      "Penerimaan terhadap ideologi komunis",
+      "Menghindari norma baru tanpa konsensus",
+      "Menghapus nilai dasar Pancasila",
+    ],
+    correct: "Menghindari norma baru tanpa konsensus",
+  },
+  {
+    question: "Bagaimana Pancasila berfungsi sebagai ideologi negara?",
+    options: [
+      "Sebagai perangkat hukum yang mengikat secara internasional",
+      "Sebagai cita-cita yang tidak boleh diubah",
+      "Sebagai pedoman yang menyatukan langkah bangsa",
+      "Sebagai aturan politik tertinggi",
+    ],
+    correct: "Sebagai pedoman yang menyatukan langkah bangsa",
+  },
+  {
+    question: "Apa dasar dari kajian aksiologi Pancasila?",
+    options: [
+      "Nilai kebebasan mutlak",
+      "Hakikat manusia dalam masyarakat",
+      "Manfaat praktis dari nilai-nilai Pancasila",
+      "Kebenaran filosofis absolut",
+    ],
+    correct: "Manfaat praktis dari nilai-nilai Pancasila",
   },
 ];
 

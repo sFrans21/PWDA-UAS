@@ -221,54 +221,78 @@ import {
 
 const quizData = [
   {
-    question: "Siapa yang memprakarsai Pancasila?",
-    options: ["Sukarno", "Mohammad Hatta", "Soepomo", "Ki Hadjar Dewantara"],
-    correct: "Sukarno",
-  },
-  {
-    question: "Apa sila kedua dari Pancasila?",
+    question: "Apa tujuan dari memahami sejarah perjuangan bangsa?",
     options: [
-      "Ketuhanan Yang Maha Esa",
-      "Kemanusiaan yang Adil dan Beradab",
-      "Persatuan Indonesia",
-      "Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan",
+      "Untuk memuliakan tokoh pahlawan",
+      "Agar bisa memahami makna Pancasila",
+      "Supaya bisa mencontoh negara lain",
+      "Hanya sebagai pelajaran sejarah",
     ],
-    correct: "Kemanusiaan yang Adil dan Beradab",
+    correct: "Agar bisa memahami makna Pancasila",
   },
   {
-    question: "Apa lambang sila keempat Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Kepala banteng", "Rantai"],
-    correct: "Kepala banteng",
-  },
-  {
-    question: "Apa arti dari Bhineka Tunggal Ika?",
+    question: "Apa yang dimaksud dengan multikulturalisme?",
     options: [
-      "Bersatu dalam Keberagaman",
-      "Berbeda untuk Menyeragamkan",
-      "Kesatuan yang Menyamakan",
-      "Keanekaragaman yang Dihapuskan",
+      "Ideologi yang menyatukan semua budaya",
+      "Sikap yang mengutamakan satu budaya",
+      "Pengakuan terhadap keberagaman budaya",
+      "Hanya budaya mayoritas yang dihargai",
     ],
-    correct: "Bersatu dalam Keberagaman",
+    correct: "Pengakuan terhadap keberagaman budaya",
   },
   {
-    question: "Apa simbol sila ketiga Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Padi dan kapas", "Kepala banteng"],
-    correct: "Pohon beringin",
-  },
-  {
-    question: "Apa tujuan Pancasila sebagai ideologi negara?",
+    question: "Apa tujuan dari teori multikulturalisme 'Salad Bowl'?",
     options: [
-      "Menghapus keberagaman",
-      "Membentuk masyarakat adil dan makmur",
-      "Menjunjung kebebasan mutlak",
-      "Mengutamakan kepentingan individu",
+      "Penyatuan budaya dalam satu wadah",
+      "Pembauran budaya tanpa kehilangan identitas",
+      "Dominasi budaya mayoritas",
+      "Asimilasi penuh dengan budaya lokal",
     ],
-    correct: "Membentuk masyarakat adil dan makmur",
+    correct: "Pembauran budaya tanpa kehilangan identitas",
   },
   {
-    question: "Apa warna dasar lambang negara Indonesia?",
-    options: ["Merah", "Hitam", "Putih", "Kuning"],
-    correct: "Kuning",
+    question:
+      "Apa yang menjadi salah satu ancaman terhadap kehidupan berbangsa di Indonesia?",
+    options: [
+      "Peningkatan ekonomi",
+      "Kelangkaan komoditas tertentu",
+      "Meningkatnya pendidikan",
+      "Semakin banyak mahasiswa",
+    ],
+    correct: "Kelangkaan komoditas tertentu",
+  },
+  {
+    question:
+      "Apa makna dari semboyan 'JASMERAH' yang dikemukakan oleh Soekarno?",
+    options: [
+      "Jangan melupakan jasa para pahlawan",
+      "Jangan melupakan sejarah",
+      "Jangan merendahkan budaya sendiri",
+      "Jangan mengagungkan budaya lain",
+    ],
+    correct: "Jangan melupakan sejarah",
+  },
+  {
+    question:
+      "Peran mahasiswa dalam kehidupan berbangsa adalah sebagai berikut, kecuali?",
+    options: [
+      "Penggerak pembangunan",
+      "Motivator pembangunan",
+      "Pengisi posisi pemerintahan",
+      "Evaluator pembangunan",
+    ],
+    correct: "Pengisi posisi pemerintahan",
+  },
+  {
+    question:
+      "Menurut Samuel P. Huntington, apa yang memicu konflik antarperadaban di masa depan?",
+    options: [
+      "Perbedaan politik",
+      "Ideologi kapitalisme",
+      "Faktor SARA",
+      "Faktor ekonomi",
+    ],
+    correct: "Faktor SARA",
   },
 ];
 

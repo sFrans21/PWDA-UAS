@@ -221,54 +221,82 @@ import {
 
 const quizData = [
   {
-    question: "Siapa yang memprakarsai Pancasila?",
-    options: ["Sukarno", "Mohammad Hatta", "Soepomo", "Ki Hadjar Dewantara"],
-    correct: "Sukarno",
-  },
-  {
-    question: "Apa sila kedua dari Pancasila?",
+    question:
+      "Bagaimana demokrasi Indonesia menurut konsep Demokrasi Pancasila?",
     options: [
-      "Ketuhanan Yang Maha Esa",
-      "Kemanusiaan yang Adil dan Beradab",
-      "Persatuan Indonesia",
-      "Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan",
+      "Mengutamakan kebebasan individu",
+      "Berlandaskan hati nurani dan kesetaraan",
+      "Bersifat formal dan administratif",
+      "Mengikuti model demokrasi liberal",
     ],
-    correct: "Kemanusiaan yang Adil dan Beradab",
+    correct: "Berlandaskan hati nurani dan kesetaraan",
   },
   {
-    question: "Apa lambang sila keempat Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Kepala banteng", "Rantai"],
-    correct: "Kepala banteng",
-  },
-  {
-    question: "Apa arti dari Bhineka Tunggal Ika?",
+    question:
+      "Apa yang dimaksud dengan ‘demokrasi prosedural’ dalam konteks Indonesia?",
     options: [
-      "Bersatu dalam Keberagaman",
-      "Berbeda untuk Menyeragamkan",
-      "Kesatuan yang Menyamakan",
-      "Keanekaragaman yang Dihapuskan",
+      "Demokrasi yang hanya menjalankan aturan tanpa esensi",
+      "Sistem pemerintahan yang melibatkan rakyat secara aktif",
+      "Demokrasi yang menekankan hak asasi manusia",
+      "Pemerintahan berdasarkan ideologi tertentu",
     ],
-    correct: "Bersatu dalam Keberagaman",
+    correct: "Demokrasi yang hanya menjalankan aturan tanpa esensi",
   },
   {
-    question: "Apa simbol sila ketiga Pancasila?",
-    options: ["Bintang", "Pohon beringin", "Padi dan kapas", "Kepala banteng"],
-    correct: "Pohon beringin",
-  },
-  {
-    question: "Apa tujuan Pancasila sebagai ideologi negara?",
+    question:
+      "Sanusi (1998) menyebutkan bahwa salah satu pilar demokrasi konstitusional Indonesia adalah:",
     options: [
-      "Menghapus keberagaman",
-      "Membentuk masyarakat adil dan makmur",
-      "Menjunjung kebebasan mutlak",
-      "Mengutamakan kepentingan individu",
+      "Demokrasi yang berdasarkan kebebasan penuh",
+      "Demokrasi dengan kecerdasan",
+      "Demokrasi yang sepenuhnya dikuasai negara",
+      "Demokrasi tanpa otonomi daerah",
     ],
-    correct: "Membentuk masyarakat adil dan makmur",
+    correct: "Demokrasi dengan kecerdasan",
   },
   {
-    question: "Apa warna dasar lambang negara Indonesia?",
-    options: ["Merah", "Hitam", "Putih", "Kuning"],
-    correct: "Kuning",
+    question:
+      "Menurut Bung Karno, demokrasi yang cocok bagi Indonesia bukanlah demokrasi Barat tetapi demokrasi berbentuk:",
+    options: [
+      "Liberalisme individu",
+      "Permusyawaratan yang memberi hidup",
+      "Kedaulatan rakyat absolut",
+      "Kesepakatan berbasis ekonomi",
+    ],
+    correct: "Permusyawaratan yang memberi hidup",
+  },
+  {
+    question:
+      "Apa yang menjadi tujuan utama penerapan pendidikan demokrasi di Indonesia?",
+    options: [
+      "Mendorong rakyat berperan dalam pemilu",
+      "Meningkatkan ketertiban umum",
+      "Membangun warga negara yang tahu, mau, dan mampu demokrasi",
+      "Menghapus perbedaan pandangan politik di masyarakat",
+    ],
+    correct: "Membangun warga negara yang tahu, mau, dan mampu demokrasi",
+  },
+  {
+    question:
+      "Bagaimana perbedaan utama antara demokrasi langsung dan demokrasi Pancasila?",
+    options: [
+      "Demokrasi langsung didasarkan pada keadilan, Pancasila pada mayoritas",
+      "Demokrasi langsung mengutamakan suara mayoritas, Pancasila menggunakan musyawarah",
+      "Demokrasi Pancasila tidak melibatkan rakyat dalam keputusan",
+      "Demokrasi langsung hanya berlaku di Indonesia",
+    ],
+    correct:
+      "Demokrasi langsung mengutamakan suara mayoritas, Pancasila menggunakan musyawarah",
+  },
+  {
+    question:
+      "Apa yang menjadi kendala besar dalam penerapan demokrasi berkeadaban di Indonesia menurut materi?",
+    options: [
+      "Kurangnya partisipasi warga negara dalam politik",
+      "Liberalisme dan sekularisme yang mengancam nilai Pancasila",
+      "Tingginya biaya kampanye politik",
+      "Pengaruh budaya global dalam sistem pendidikan",
+    ],
+    correct: "Liberalisme dan sekularisme yang mengancam nilai Pancasila",
   },
 ];
 
