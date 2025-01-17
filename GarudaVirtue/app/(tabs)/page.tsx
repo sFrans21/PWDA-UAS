@@ -172,12 +172,12 @@
 
 // // Impor gambar dari folder assets
 // const images = [
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png"),
+//   require("@/assets/images/1.png"),
+//   require("@/assets/images/2.png"),
+//   require("@/assets/images/3.png"),
+//   require("@/assets/images/4.png"),
+//   require("@/assets/images/5.png"),
+//   require("@/assets/images/6.png"),
 // ];
 
 // interface ModuleCardProps {
@@ -317,12 +317,12 @@
 
 // // Impor gambar dari folder assets
 // const images = [
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png"),
-//   require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png"),
+//   require("@/assets/images/1.png"),
+//   require("@/assets/images/2.png"),
+//   require("@/assets/images/3.png"),
+//   require("@/assets/images/4.png"),
+//   require("@/assets/images/5.png"),
+//   require("@/assets/images/6.png"),
 // ];
 
 // interface ModuleCardProps {
@@ -479,7 +479,7 @@
 //       <View style={styles.moduleContainer}>
 //         <View style={styles.moduleCard}>
 //           <Image
-//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png")}
+//             source={require("@/assets/images/1.png")}
 //             style={styles.moduleImage}
 //           />
 //           <Text style={styles.moduleTitle}>Modul 1</Text>
@@ -493,7 +493,7 @@
 
 //         <View style={styles.moduleCard}>
 //           <Image
-//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+//             source={require("@/assets/images/2.png")}
 //             style={styles.moduleImage}
 //           />
 //           <Text style={styles.moduleTitle}>Modul 2</Text>
@@ -507,7 +507,7 @@
 
 //         <View style={styles.moduleCard}>
 //           <Image
-//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png")}
+//             source={require("@/assets/images/3.png")}
 //             style={styles.moduleImage}
 //           />
 //           <Text style={styles.moduleTitle}>Modul 3</Text>
@@ -520,7 +520,7 @@
 //         </View>
 //         <View style={styles.moduleCard}>
 //           <Image
-//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png")}
+//             source={require("@/assets/images/4.png")}
 //             style={styles.moduleImage}
 //           />
 //           <Text style={styles.moduleTitle}>Modul 4</Text>
@@ -534,7 +534,7 @@
 
 //         <View style={styles.moduleCard}>
 //           <Image
-//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png")}
+//             source={require("@/assets/images/5.png")}
 //             style={styles.moduleImage}
 //           />
 //           <Text style={styles.moduleTitle}>Modul 5</Text>
@@ -548,7 +548,7 @@
 
 //         <View style={styles.moduleCard}>
 //           <Image
-//             source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png")}
+//             source={require("@/assets/images/6.png")}
 //             style={styles.moduleImage}
 //           />
 //           <Text style={styles.moduleTitle}>Modul 6</Text>
@@ -666,7 +666,7 @@ const HomePage = () => {
       <View style={styles.moduleContainer}>
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/1.png")}
+            source={require("@/assets/images/1.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 1</Text>
@@ -680,7 +680,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/2.png")}
+            source={require("@/assets/images/2.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 2</Text>
@@ -694,7 +694,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/3.png")}
+            source={require("@/assets/images/3.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 3</Text>
@@ -707,7 +707,7 @@ const HomePage = () => {
         </View>
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/4.png")}
+            source={require("@/assets/images/4.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 4</Text>
@@ -721,7 +721,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/5.png")}
+            source={require("@/assets/images/5.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 5</Text>
@@ -735,7 +735,7 @@ const HomePage = () => {
 
         <View style={styles.moduleCard}>
           <Image
-            source={require("@/assets/images/Pancasila dan Kewarganegaraan - KU2071/6.png")}
+            source={require("@/assets/images/6.png")}
             style={styles.moduleImage}
           />
           <Text style={styles.moduleTitle}>Modul 6</Text>
